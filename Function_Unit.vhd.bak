@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Function_Unit is 
+	generic ( Width : integer := 8)
+	port (
+				FS : in std_logic_vector(4 downto 0);
+				A : in std_logic_vector(Width - 1 downto 0);
+				B : in std_logic_vector(Width - 1 downto 0);
+				MF_Sel : in std_logic;
+				F : out std_logic_vector(Width -1 downto 0);
+				Z : out std_logic
+			)
+end Entity Function_Unit;
+
+Architecture RTL of Function_Unit is
+
+	Alias H_Sel is FS(4 downto 3);
+	Alias G_Sel is FS(2 downto 0);
+	
+	Signal G is std_logic_vector(Width - 1 downto 0);
+	Signal H is Std_logic_vector(Width - 1 downto 0);
+	
+begin
+
+	With MF select
+		F <= 	G when '0',
+				H when '1',
+				(others = '0') when others;
+end;

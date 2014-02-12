@@ -1,0 +1,377 @@
+Quartus II
+Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+48
+4277
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+DataPath
+# storage
+db|DataPath.(0).cnf
+db|DataPath.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+DataPath.vhd
+eb2cf131368aba5b11d5bf0d2412683
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+Width
+8
+PARAMETER_SIGNED_DEC
+DEF
+}
+# include_file {
+ALU.vhd
+d9b9331057845fa028d6b2af8ff5f861
+RegisterFile.vhd
+314549aaf6296c7c292a661a5107d47
+Shifter.vhd
+e44ab49588459f2a16f6eeaa7024545
+Function_Unit.vhd
+59959728ba956caa3452b9fdb1a0a629
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+RegisterFile
+# storage
+db|DataPath.(1).cnf
+db|DataPath.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+RegisterFile.vhd
+314549aaf6296c7c292a661a5107d47
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+width
+8
+PARAMETER_SIGNED_DEC
+USR
+regs
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(a_addr)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(b_addr)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(dest)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(d_data)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(a_data)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(b_data)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+RegisterFile:Registers
+}
+# macro_sequence
+
+# end
+# entity
+Function_Unit
+# storage
+db|DataPath.(2).cnf
+db|DataPath.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Function_Unit.vhd
+59959728ba956caa3452b9fdb1a0a629
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+width
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(fs)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(a)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(f)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+ALU.vhd
+d9b9331057845fa028d6b2af8ff5f861
+Shifter.vhd
+e44ab49588459f2a16f6eeaa7024545
+}
+# hierarchies {
+Function_Unit:Functions
+}
+# macro_sequence
+
+# end
+# entity
+ALU
+# storage
+db|DataPath.(3).cnf
+db|DataPath.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ALU.vhd
+d9b9331057845fa028d6b2af8ff5f861
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+width
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(sel)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(a)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(g)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Function_Unit:Functions|ALU:ALU_Inst
+}
+# macro_sequence
+
+# end
+# entity
+Logic_Slice
+# storage
+db|DataPath.(4).cnf
+db|DataPath.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Logic_Slice.vhd
+c43c9fbebb2d7b3a926b453a9835b76
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(sel)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:0:LS
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:1:LS
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:2:LS
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:3:LS
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:4:LS
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:5:LS
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:6:LS
+Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:7:LS
+}
+# macro_sequence
+
+# end
+# entity
+ALU_Slice
+# storage
+db|DataPath.(5).cnf
+db|DataPath.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ALU_Slice.vhd
+245d41645d36318e48c406d27b734
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(sel)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:0:ALUS
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:1:ALUS
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:2:ALUS
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:3:ALUS
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:4:ALUS
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:5:ALUS
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:6:ALUS
+Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:7:ALUS
+}
+# macro_sequence
+
+# end
+# entity
+Shifter
+# storage
+db|DataPath.(6).cnf
+db|DataPath.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Shifter.vhd
+e44ab49588459f2a16f6eeaa7024545
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+width
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(sel)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(h)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Function_Unit:Functions|Shifter:Shift_Inst
+}
+# macro_sequence
+
+# end
+# complete
+

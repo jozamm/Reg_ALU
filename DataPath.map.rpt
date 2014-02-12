@@ -1,0 +1,359 @@
+Analysis & Synthesis report for DataPath
+Tue Jan 28 17:46:43 2014
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |DataPath
+ 11. Parameter Settings for User Entity Instance: RegisterFile:Registers
+ 12. Parameter Settings for User Entity Instance: Function_Unit:Functions
+ 13. Parameter Settings for User Entity Instance: Function_Unit:Functions|ALU:ALU_Inst
+ 14. Parameter Settings for User Entity Instance: Function_Unit:Functions|Shifter:Shift_Inst
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                ;
++-----------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Jan 28 17:46:43 2014         ;
+; Quartus II Version          ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
+; Revision Name               ; DataPath                                      ;
+; Top-level Entity Name       ; DataPath                                      ;
+; Family                      ; Cyclone                                       ;
+; Total logic elements        ; 219                                           ;
+; Total pins                  ; 52                                            ;
+; Total virtual pins          ; 0                                             ;
+; Total memory bits           ; 0                                             ;
+; Total PLLs                  ; 0                                             ;
++-----------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP1C3T100C8        ;                    ;
+; Top-level entity name                                                      ; DataPath           ; DataPath           ;
+; Family name                                                                ; Cyclone            ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+
+; DataPath.vhd                     ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/DataPath.vhd      ;
+; Logic_Slice.vhd                  ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Logic_Slice.vhd   ;
+; ALU_Slice.vhd                    ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/ALU_Slice.vhd     ;
+; Function_Unit.vhd                ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Function_Unit.vhd ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/ALU.vhd           ;
+; Shifter.vhd                      ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Shifter.vhd       ;
+; RegisterFile.vhd                 ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/RegisterFile.vhd  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 219   ;
+;     -- Combinational with no register       ; 155   ;
+;     -- Register only                        ; 64    ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 105   ;
+;     -- 3 input functions                    ; 48    ;
+;     -- 2 input functions                    ; 2     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 219   ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 64    ;
+;                                             ;       ;
+; Total registers                             ; 64    ;
+; I/O pins                                    ; 52    ;
+; Maximum fan-out node                        ; Clock ;
+; Maximum fan-out                             ; 64    ;
+; Total fan-out                               ; 842   ;
+; Average fan-out                             ; 3.11  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                           ; Library Name ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+--------------+
+; |DataPath                                 ; 219 (64)    ; 64           ; 0           ; 52   ; 0            ; 155 (64)     ; 64 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath                                                                     ;              ;
+;    |Function_Unit:Functions|              ; 43 (3)      ; 0            ; 0           ; 0    ; 0            ; 43 (3)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions                                             ;              ;
+;       |ALU:ALU_Inst|                      ; 40 (16)     ; 0            ; 0           ; 0    ; 0            ; 40 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst                                ;              ;
+;          |ALU_Slice:\ALU_Generate:0:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:0:ALUS ;              ;
+;          |ALU_Slice:\ALU_Generate:1:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:1:ALUS ;              ;
+;          |ALU_Slice:\ALU_Generate:2:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:2:ALUS ;              ;
+;          |ALU_Slice:\ALU_Generate:3:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:3:ALUS ;              ;
+;          |ALU_Slice:\ALU_Generate:4:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:4:ALUS ;              ;
+;          |ALU_Slice:\ALU_Generate:5:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:5:ALUS ;              ;
+;          |ALU_Slice:\ALU_Generate:6:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:6:ALUS ;              ;
+;          |ALU_Slice:\ALU_Generate:7:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:7:ALUS ;              ;
+;    |RegisterFile:Registers|               ; 112 (112)   ; 64           ; 0           ; 0    ; 0            ; 48 (48)      ; 64 (64)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|RegisterFile:Registers                                              ;              ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 64    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                         ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------+----------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:7:ALUS|Mux0 ;                            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; |DataPath|RegisterFile:Registers|Mux4                                              ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|G[3]                                ;                            ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; |DataPath|B_Bus[0]                                                                 ;                            ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; |DataPath|D_Bus[1]                                                                 ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------+----------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |DataPath ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; Width          ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Registers ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; width          ; 8     ; Signed Integer                             ;
+; regs           ; 8     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Function_Unit:Functions ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; width          ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Function_Unit:Functions|ALU:ALU_Inst ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Function_Unit:Functions|Shifter:Shift_Inst ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 28 17:46:38 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DataPath -c DataPath
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 2 design units, including 1 entities, in source file DataPath.vhd
+    Info: Found design unit 1: DataPath-RTL
+    Info: Found entity 1: DataPath
+Info: Found 2 design units, including 1 entities, in source file Logic_Slice.vhd
+    Info: Found design unit 1: Logic_Slice-RTL
+    Info: Found entity 1: Logic_Slice
+Info: Found 2 design units, including 1 entities, in source file ALU_Slice.vhd
+    Info: Found design unit 1: ALU_Slice-RTL
+    Info: Found entity 1: ALU_Slice
+Info: Found 2 design units, including 1 entities, in source file Function_Unit.vhd
+    Info: Found design unit 1: Function_Unit-RTL
+    Info: Found entity 1: Function_Unit
+Info: Found 2 design units, including 1 entities, in source file ALU.vhd
+    Info: Found design unit 1: ALU-RTL
+    Info: Found entity 1: ALU
+Info: Found 2 design units, including 1 entities, in source file Shifter.vhd
+    Info: Found design unit 1: shifter-RTL
+    Info: Found entity 1: Shifter
+Info: Found 2 design units, including 1 entities, in source file RegisterFile.vhd
+    Info: Found design unit 1: RegisterFile-RTL
+    Info: Found entity 1: RegisterFile
+Info: Elaborating entity "DataPath" for the top level hierarchy
+Info: Elaborating entity "RegisterFile" for hierarchy "RegisterFile:Registers"
+Info: Elaborating entity "Function_Unit" for hierarchy "Function_Unit:Functions"
+Info: Elaborating entity "ALU" for hierarchy "Function_Unit:Functions|ALU:ALU_Inst"
+Info: Elaborating entity "Logic_Slice" for hierarchy "Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:0:LS"
+Info: Elaborating entity "ALU_Slice" for hierarchy "Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:0:ALUS"
+Info: Elaborating entity "Shifter" for hierarchy "Function_Unit:Functions|Shifter:Shift_Inst"
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Info: Implemented 271 device resources after synthesis - the final resource count might be different
+    Info: Implemented 34 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 219 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 284 megabytes
+    Info: Processing ended: Tue Jan 28 17:46:43 2014
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

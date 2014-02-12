@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic.all;
+
+--This entity implements the datapath as defined in the chapter Instruction Set Architecture
+--The register file and ALU are implemented as seperate entities
+
+Entity DataPath is
+	port (
+			 Reset : std_logic;
+			 Clock : std_logic;
+			 Control_Word : std_logic_vector
+			)
+End entity DataPath
+
+Architecture RTL of DataPath is
+begin
+End Architecture;

@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Jan 28 17:46:51 2014
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition
+Revision Name : DataPath
+Top-level Entity Name : DataPath
+Family : Cyclone
+Device : EP1C3T100C8
+Timing Models : Final
+Total logic elements : 155 / 2,910 ( 5 % )
+Total pins : 52 / 65 ( 80 % )
+Total virtual pins : 0
+Total memory bits : 0 / 59,904 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )
