@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for DataPath
-Tue Jan 28 17:46:55 2014
+Wed Feb 12 17:43:19 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -91,7 +91,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 88.11 MHz ; 88.11 MHz       ; Clock      ;      ;
+; 67.79 MHz ; 67.79 MHz       ; Clock      ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -101,7 +101,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+---------------+
 ; Clock ; Slack   ; End Point TNS ;
 +-------+---------+---------------+
-; Clock ; -10.349 ; -577.068      ;
+; Clock ; -13.751 ; -904.130      ;
 +-------+---------+---------------+
 
 
@@ -110,7 +110,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; Clock ; 3.463 ; 0.000         ;
+; Clock ; 3.578 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -131,7 +131,7 @@ No paths to report.
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; Clock ; -1.583 ; -170.287      ;
+; Clock ; -1.583 ; -212.463      ;
 +-------+--------+---------------+
 
 
@@ -140,106 +140,106 @@ No paths to report.
 +---------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
-; -10.349 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.312     ;
-; -10.343 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.306     ;
-; -10.323 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.286     ;
-; -10.317 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.280     ;
-; -10.290 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.253     ;
-; -10.284 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.247     ;
-; -10.246 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.209     ;
-; -10.240 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.203     ;
-; -10.158 ; RegisterFile:Registers|RegFile[4][2] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.121     ;
-; -10.152 ; RegisterFile:Registers|RegFile[4][2] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.115     ;
-; -10.140 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.103     ;
-; -10.134 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.097     ;
-; -10.092 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.055     ;
-; -10.090 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.053     ;
-; -10.079 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.042     ;
-; -10.078 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.041     ;
-; -10.066 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.029     ;
-; -10.064 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.027     ;
-; -10.053 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.016     ;
-; -10.052 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.015     ;
-; -10.044 ; RegisterFile:Registers|RegFile[0][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.007     ;
-; -10.038 ; RegisterFile:Registers|RegFile[0][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 11.001     ;
-; -10.034 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.997     ;
-; -10.033 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.996     ;
-; -10.031 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.994     ;
-; -10.028 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.991     ;
-; -10.020 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.983     ;
-; -10.019 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.982     ;
-; -10.013 ; RegisterFile:Registers|RegFile[4][4] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.976     ;
-; -10.007 ; RegisterFile:Registers|RegFile[4][4] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.970     ;
-; -9.989  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.952     ;
-; -9.987  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.950     ;
-; -9.976  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.939     ;
-; -9.975  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.938     ;
-; -9.958  ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.921     ;
-; -9.952  ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.915     ;
-; -9.948  ; RegisterFile:Registers|RegFile[1][2] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.911     ;
-; -9.942  ; RegisterFile:Registers|RegFile[1][2] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.905     ;
-; -9.915  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[6][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.878     ;
-; -9.913  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[4][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.876     ;
-; -9.907  ; RegisterFile:Registers|RegFile[6][0] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.870     ;
-; -9.902  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[0][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.865     ;
-; -9.902  ; RegisterFile:Registers|RegFile[6][2] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.865     ;
-; -9.901  ; RegisterFile:Registers|RegFile[6][0] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.864     ;
-; -9.901  ; RegisterFile:Registers|RegFile[4][2] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.864     ;
-; -9.900  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[1][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.863     ;
-; -9.899  ; RegisterFile:Registers|RegFile[4][2] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.862     ;
-; -9.896  ; RegisterFile:Registers|RegFile[6][2] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.859     ;
-; -9.889  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[6][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.852     ;
-; -9.888  ; RegisterFile:Registers|RegFile[4][2] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.851     ;
-; -9.887  ; RegisterFile:Registers|RegFile[4][2] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.850     ;
-; -9.887  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[4][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.850     ;
-; -9.883  ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.846     ;
-; -9.881  ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.844     ;
-; -9.880  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.843     ;
-; -9.876  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.839     ;
-; -9.876  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[0][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.839     ;
-; -9.874  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[1][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.837     ;
-; -9.870  ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.833     ;
-; -9.869  ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.832     ;
-; -9.856  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[6][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.819     ;
-; -9.854  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[4][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.817     ;
-; -9.854  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.817     ;
-; -9.853  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[2][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.816     ;
-; -9.850  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[3][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.813     ;
-; -9.850  ; RegisterFile:Registers|RegFile[3][1] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.813     ;
-; -9.850  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.813     ;
-; -9.845  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[7][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.808     ;
-; -9.844  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[2][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.807     ;
-; -9.844  ; RegisterFile:Registers|RegFile[3][1] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.807     ;
-; -9.843  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[0][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.806     ;
-; -9.841  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[1][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.804     ;
-; -9.833  ; RegisterFile:Registers|RegFile[4][3] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.796     ;
-; -9.827  ; RegisterFile:Registers|RegFile[4][3] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.790     ;
-; -9.827  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[2][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.790     ;
-; -9.824  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[3][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.787     ;
-; -9.821  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.784     ;
-; -9.820  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[7][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.783     ;
-; -9.819  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[7][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.782     ;
-; -9.818  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[2][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.781     ;
-; -9.817  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.780     ;
-; -9.812  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[6][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.775     ;
-; -9.810  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[4][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.773     ;
-; -9.799  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[0][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.762     ;
-; -9.797  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[1][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.760     ;
-; -9.794  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[2][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.757     ;
-; -9.794  ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[7][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.757     ;
-; -9.791  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[3][5] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.754     ;
-; -9.787  ; RegisterFile:Registers|RegFile[0][1] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.750     ;
-; -9.786  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[7][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.749     ;
-; -9.785  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[4][4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.748     ;
-; -9.785  ; RegisterFile:Registers|RegFile[0][1] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.748     ;
-; -9.785  ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[2][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.748     ;
-; -9.781  ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[6][4] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.744     ;
-; -9.777  ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.740     ;
-; -9.777  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.740     ;
-; -9.775  ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.738     ;
-; -9.774  ; RegisterFile:Registers|RegFile[0][1] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.737     ;
-; -9.773  ; RegisterFile:Registers|RegFile[0][1] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.736     ;
-; -9.773  ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 10.736     ;
+; -13.751 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.742     ;
+; -13.750 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.741     ;
+; -13.592 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.555     ;
+; -13.591 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.554     ;
+; -13.481 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.444     ;
+; -13.480 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.443     ;
+; -13.476 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 14.481     ;
+; -13.475 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 14.480     ;
+; -13.407 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.370     ;
+; -13.406 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.369     ;
+; -13.318 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[2][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 14.323     ;
+; -13.317 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[3][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 14.322     ;
+; -13.317 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.294     ;
+; -13.316 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.293     ;
+; -13.314 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[1][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.277     ;
+; -13.310 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[0][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.273     ;
+; -13.264 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[1][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 14.269     ;
+; -13.264 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[0][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 14.269     ;
+; -13.222 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.213     ;
+; -13.221 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.212     ;
+; -13.206 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.183     ;
+; -13.205 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.182     ;
+; -13.189 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.152     ;
+; -13.188 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.151     ;
+; -13.185 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[4][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.148     ;
+; -13.183 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[7][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 14.146     ;
+; -13.159 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[2][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.136     ;
+; -13.158 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[3][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.135     ;
+; -13.155 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[1][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 14.090     ;
+; -13.151 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[0][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 14.086     ;
+; -13.132 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.109     ;
+; -13.131 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.108     ;
+; -13.105 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[1][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.082     ;
+; -13.105 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[0][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.082     ;
+; -13.103 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[2][7] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.094     ;
+; -13.100 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[3][7] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.091     ;
+; -13.048 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[2][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.025     ;
+; -13.047 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[3][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 14.024     ;
+; -13.044 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[1][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.979     ;
+; -13.040 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[0][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.975     ;
+; -13.026 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[4][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.961     ;
+; -13.025 ; RegisterFile:Registers|RegFile[0][4] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.016     ;
+; -13.024 ; RegisterFile:Registers|RegFile[0][4] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 14.015     ;
+; -13.024 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[7][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.959     ;
+; -12.994 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[1][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.971     ;
+; -12.994 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[0][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.971     ;
+; -12.974 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[2][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.951     ;
+; -12.973 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[3][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.950     ;
+; -12.971 ; RegisterFile:Registers|RegFile[0][7] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; -0.014     ; 13.920     ;
+; -12.970 ; RegisterFile:Registers|RegFile[0][7] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; -0.014     ; 13.919     ;
+; -12.970 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[1][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.905     ;
+; -12.967 ; RegisterFile:Registers|RegFile[1][4] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.958     ;
+; -12.966 ; RegisterFile:Registers|RegFile[1][4] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.957     ;
+; -12.966 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[0][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.901     ;
+; -12.947 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.952     ;
+; -12.946 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.951     ;
+; -12.944 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[2][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.907     ;
+; -12.941 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[3][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.904     ;
+; -12.920 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[1][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.897     ;
+; -12.920 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[0][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.897     ;
+; -12.915 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[4][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.850     ;
+; -12.914 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.891     ;
+; -12.913 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[2][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.876     ;
+; -12.913 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[3][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.876     ;
+; -12.913 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.890     ;
+; -12.913 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[7][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.848     ;
+; -12.891 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.882     ;
+; -12.890 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.881     ;
+; -12.841 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[4][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.776     ;
+; -12.839 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[7][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.774     ;
+; -12.833 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[2][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.796     ;
+; -12.832 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[6][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.837     ;
+; -12.830 ; RegisterFile:Registers|RegFile[6][1] ; RegisterFile:Registers|RegFile[3][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.793     ;
+; -12.793 ; RegisterFile:Registers|RegFile[3][0] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.784     ;
+; -12.792 ; RegisterFile:Registers|RegFile[3][0] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.783     ;
+; -12.789 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[2][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.794     ;
+; -12.788 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[3][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.793     ;
+; -12.785 ; RegisterFile:Registers|RegFile[0][2] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.776     ;
+; -12.785 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[1][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.748     ;
+; -12.784 ; RegisterFile:Registers|RegFile[0][2] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.775     ;
+; -12.781 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[0][9] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.744     ;
+; -12.761 ; RegisterFile:Registers|RegFile[0][0] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.752     ;
+; -12.760 ; RegisterFile:Registers|RegFile[0][0] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; 0.028      ; 13.751     ;
+; -12.759 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[2][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.722     ;
+; -12.756 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[2][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.733     ;
+; -12.756 ; RegisterFile:Registers|RegFile[7][1] ; RegisterFile:Registers|RegFile[3][7] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 13.719     ;
+; -12.755 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[3][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.732     ;
+; -12.754 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[2][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.689     ;
+; -12.754 ; RegisterFile:Registers|RegFile[4][1] ; RegisterFile:Registers|RegFile[3][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.689     ;
+; -12.752 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[1][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.687     ;
+; -12.750 ; RegisterFile:Registers|RegFile[0][4] ; RegisterFile:Registers|RegFile[1][6] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.755     ;
+; -12.749 ; RegisterFile:Registers|RegFile[0][4] ; RegisterFile:Registers|RegFile[0][6] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.754     ;
+; -12.748 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[0][9] ; Clock        ; Clock       ; 1.000        ; -0.028     ; 13.683     ;
+; -12.735 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[1][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.740     ;
+; -12.735 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[0][8] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.740     ;
+; -12.721 ; RegisterFile:Registers|RegFile[1][7] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 1.000        ; -0.014     ; 13.670     ;
+; -12.720 ; RegisterFile:Registers|RegFile[1][7] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 1.000        ; -0.014     ; 13.669     ;
+; -12.702 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[1][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.679     ;
+; -12.702 ; RegisterFile:Registers|RegFile[5][1] ; RegisterFile:Registers|RegFile[0][8] ; Clock        ; Clock       ; 1.000        ; 0.014      ; 13.679     ;
+; -12.699 ; RegisterFile:Registers|RegFile[1][0] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 1.000        ; 0.042      ; 13.704     ;
 +---------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -248,106 +248,106 @@ No paths to report.
 +-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
-; 3.463 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.478      ;
-; 3.601 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[2][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.616      ;
-; 3.603 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[1][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.618      ;
-; 3.679 ; RegisterFile:Registers|RegFile[7][4] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.694      ;
-; 3.732 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.747      ;
-; 3.776 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.791      ;
-; 3.801 ; RegisterFile:Registers|RegFile[7][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.816      ;
-; 3.836 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[5][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.851      ;
-; 3.902 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[7][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.917      ;
-; 3.975 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.990      ;
-; 3.992 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.007      ;
-; 4.034 ; RegisterFile:Registers|RegFile[3][4] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.049      ;
-; 4.039 ; RegisterFile:Registers|RegFile[2][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.054      ;
-; 4.182 ; RegisterFile:Registers|RegFile[3][0] ; RegisterFile:Registers|RegFile[2][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.197      ;
-; 4.184 ; RegisterFile:Registers|RegFile[3][0] ; RegisterFile:Registers|RegFile[1][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.199      ;
-; 4.186 ; RegisterFile:Registers|RegFile[5][0] ; RegisterFile:Registers|RegFile[2][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.201      ;
-; 4.188 ; RegisterFile:Registers|RegFile[5][0] ; RegisterFile:Registers|RegFile[1][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.203      ;
-; 4.235 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.250      ;
-; 4.250 ; RegisterFile:Registers|RegFile[5][4] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.265      ;
-; 4.267 ; RegisterFile:Registers|RegFile[1][4] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.282      ;
-; 4.278 ; RegisterFile:Registers|RegFile[5][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.293      ;
-; 4.313 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[0][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.328      ;
-; 4.318 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[3][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.333      ;
-; 4.415 ; RegisterFile:Registers|RegFile[3][3] ; RegisterFile:Registers|RegFile[5][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.430      ;
-; 4.476 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.491      ;
-; 4.483 ; RegisterFile:Registers|RegFile[3][0] ; RegisterFile:Registers|RegFile[7][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.498      ;
-; 4.487 ; RegisterFile:Registers|RegFile[5][0] ; RegisterFile:Registers|RegFile[7][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.502      ;
-; 4.515 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[7][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.530      ;
-; 4.527 ; RegisterFile:Registers|RegFile[0][4] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.542      ;
-; 4.545 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[3][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.560      ;
-; 4.548 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[2][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.563      ;
-; 4.550 ; RegisterFile:Registers|RegFile[5][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.565      ;
-; 4.595 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[1][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.610      ;
-; 4.597 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[0][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.612      ;
-; 4.693 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[7][2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.708      ;
-; 4.723 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[6][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.738      ;
-; 4.725 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[5][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.740      ;
-; 4.727 ; RegisterFile:Registers|RegFile[0][0] ; RegisterFile:Registers|RegFile[2][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.742      ;
-; 4.729 ; RegisterFile:Registers|RegFile[0][0] ; RegisterFile:Registers|RegFile[1][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.744      ;
-; 4.731 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.746      ;
-; 4.731 ; RegisterFile:Registers|RegFile[7][4] ; RegisterFile:Registers|RegFile[7][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.746      ;
-; 4.736 ; RegisterFile:Registers|RegFile[7][0] ; RegisterFile:Registers|RegFile[4][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.751      ;
-; 4.736 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.751      ;
-; 4.761 ; RegisterFile:Registers|RegFile[7][4] ; RegisterFile:Registers|RegFile[3][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.776      ;
-; 4.764 ; RegisterFile:Registers|RegFile[7][4] ; RegisterFile:Registers|RegFile[2][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.779      ;
-; 4.780 ; RegisterFile:Registers|RegFile[3][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.795      ;
-; 4.811 ; RegisterFile:Registers|RegFile[7][4] ; RegisterFile:Registers|RegFile[1][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.826      ;
-; 4.813 ; RegisterFile:Registers|RegFile[7][4] ; RegisterFile:Registers|RegFile[0][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.828      ;
-; 4.846 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[1][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.861      ;
-; 4.846 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[0][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.861      ;
-; 4.872 ; RegisterFile:Registers|RegFile[2][6] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.887      ;
-; 4.894 ; RegisterFile:Registers|RegFile[3][0] ; RegisterFile:Registers|RegFile[0][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.909      ;
-; 4.898 ; RegisterFile:Registers|RegFile[5][0] ; RegisterFile:Registers|RegFile[0][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.913      ;
-; 4.899 ; RegisterFile:Registers|RegFile[3][0] ; RegisterFile:Registers|RegFile[3][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.914      ;
-; 4.903 ; RegisterFile:Registers|RegFile[5][0] ; RegisterFile:Registers|RegFile[3][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.918      ;
-; 4.910 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[4][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.925      ;
-; 4.911 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.926      ;
-; 4.917 ; RegisterFile:Registers|RegFile[4][0] ; RegisterFile:Registers|RegFile[2][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.932      ;
-; 4.919 ; RegisterFile:Registers|RegFile[4][0] ; RegisterFile:Registers|RegFile[1][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.934      ;
-; 4.930 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[3][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.945      ;
-; 4.946 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[2][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.961      ;
-; 4.947 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[3][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.962      ;
-; 4.949 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[7][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.964      ;
-; 4.964 ; RegisterFile:Registers|RegFile[5][5] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.979      ;
-; 4.966 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[0][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.981      ;
-; 4.968 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[1][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.983      ;
-; 4.968 ; RegisterFile:Registers|RegFile[7][3] ; RegisterFile:Registers|RegFile[5][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.983      ;
-; 4.999 ; RegisterFile:Registers|RegFile[7][5] ; RegisterFile:Registers|RegFile[3][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.014      ;
-; 5.004 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[2][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.019      ;
-; 5.005 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[7][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.020      ;
-; 5.006 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[1][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.021      ;
-; 5.026 ; RegisterFile:Registers|RegFile[6][4] ; RegisterFile:Registers|RegFile[5][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.041      ;
-; 5.028 ; RegisterFile:Registers|RegFile[0][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.043      ;
-; 5.028 ; RegisterFile:Registers|RegFile[0][0] ; RegisterFile:Registers|RegFile[7][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.043      ;
-; 5.038 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[6][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.053      ;
-; 5.041 ; RegisterFile:Registers|RegFile[6][0] ; RegisterFile:Registers|RegFile[2][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.056      ;
-; 5.043 ; RegisterFile:Registers|RegFile[6][0] ; RegisterFile:Registers|RegFile[1][0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.058      ;
-; 5.044 ; RegisterFile:Registers|RegFile[2][4] ; RegisterFile:Registers|RegFile[4][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.059      ;
-; 5.055 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[2][2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.070      ;
-; 5.071 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[7][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.086      ;
-; 5.072 ; RegisterFile:Registers|RegFile[7][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.087      ;
-; 5.073 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[3][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.088      ;
-; 5.074 ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[7][2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.089      ;
-; 5.075 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[2][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.090      ;
-; 5.078 ; RegisterFile:Registers|RegFile[3][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.093      ;
-; 5.083 ; RegisterFile:Registers|RegFile[3][6] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.098      ;
-; 5.086 ; RegisterFile:Registers|RegFile[3][4] ; RegisterFile:Registers|RegFile[7][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.101      ;
-; 5.087 ; RegisterFile:Registers|RegFile[7][5] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.102      ;
-; 5.106 ; RegisterFile:Registers|RegFile[1][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.121      ;
-; 5.116 ; RegisterFile:Registers|RegFile[3][4] ; RegisterFile:Registers|RegFile[3][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.131      ;
-; 5.119 ; RegisterFile:Registers|RegFile[3][4] ; RegisterFile:Registers|RegFile[2][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.134      ;
-; 5.135 ; RegisterFile:Registers|RegFile[2][7] ; RegisterFile:Registers|RegFile[7][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.150      ;
-; 5.137 ; RegisterFile:Registers|RegFile[2][7] ; RegisterFile:Registers|RegFile[3][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.152      ;
-; 5.139 ; RegisterFile:Registers|RegFile[2][7] ; RegisterFile:Registers|RegFile[2][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.154      ;
-; 5.153 ; RegisterFile:Registers|RegFile[3][4] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.168      ;
-; 5.155 ; RegisterFile:Registers|RegFile[6][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.170      ;
-; 5.157 ; RegisterFile:Registers|RegFile[1][3] ; RegisterFile:Registers|RegFile[5][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.172      ;
-; 5.166 ; RegisterFile:Registers|RegFile[3][4] ; RegisterFile:Registers|RegFile[1][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.181      ;
-; 5.168 ; RegisterFile:Registers|RegFile[3][4] ; RegisterFile:Registers|RegFile[0][5] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.183      ;
-; 5.181 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.196      ;
+; 3.578 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.593      ;
+; 3.744 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[5][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.759      ;
+; 4.207 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[4][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.222      ;
+; 4.267 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[6][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.282      ;
+; 4.320 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.335      ;
+; 4.401 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.416      ;
+; 4.459 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[6][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.474      ;
+; 4.461 ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[5][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 4.504      ;
+; 4.462 ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[6][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 4.505      ;
+; 4.752 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[7][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.767      ;
+; 4.752 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[4][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.767      ;
+; 4.765 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.780      ;
+; 4.781 ; RegisterFile:Registers|RegFile[3][3] ; RegisterFile:Registers|RegFile[4][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.796      ;
+; 4.865 ; RegisterFile:Registers|RegFile[4][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.880      ;
+; 4.891 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[1][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.906      ;
+; 4.891 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[0][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.906      ;
+; 4.894 ; RegisterFile:Registers|RegFile[3][1] ; RegisterFile:Registers|RegFile[2][1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.909      ;
+; 4.897 ; RegisterFile:Registers|RegFile[3][1] ; RegisterFile:Registers|RegFile[1][1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.912      ;
+; 4.920 ; RegisterFile:Registers|RegFile[7][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.935      ;
+; 4.940 ; RegisterFile:Registers|RegFile[7][3] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.955      ;
+; 4.940 ; RegisterFile:Registers|RegFile[7][3] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.955      ;
+; 4.944 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[3][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.959      ;
+; 4.945 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[2][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.960      ;
+; 4.947 ; RegisterFile:Registers|RegFile[5][2] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.962      ;
+; 4.947 ; RegisterFile:Registers|RegFile[5][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.962      ;
+; 4.967 ; RegisterFile:Registers|RegFile[5][7] ; RegisterFile:Registers|RegFile[5][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.982      ;
+; 4.968 ; RegisterFile:Registers|RegFile[6][7] ; RegisterFile:Registers|RegFile[5][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.983      ;
+; 4.991 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[5][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.034      ;
+; 4.992 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[6][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.035      ;
+; 5.009 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[6][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.024      ;
+; 5.040 ; RegisterFile:Registers|RegFile[7][8] ; RegisterFile:Registers|RegFile[5][9] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.055      ;
+; 5.067 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.082      ;
+; 5.067 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.082      ;
+; 5.117 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[2][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.132      ;
+; 5.119 ; RegisterFile:Registers|RegFile[2][5] ; RegisterFile:Registers|RegFile[3][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.134      ;
+; 5.169 ; RegisterFile:Registers|RegFile[3][3] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.184      ;
+; 5.169 ; RegisterFile:Registers|RegFile[3][3] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.184      ;
+; 5.229 ; RegisterFile:Registers|RegFile[4][7] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.244      ;
+; 5.236 ; RegisterFile:Registers|RegFile[4][3] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.251      ;
+; 5.236 ; RegisterFile:Registers|RegFile[4][3] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.251      ;
+; 5.241 ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[7][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.284      ;
+; 5.242 ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[4][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.285      ;
+; 5.278 ; RegisterFile:Registers|RegFile[1][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; -0.014     ; 5.279      ;
+; 5.278 ; RegisterFile:Registers|RegFile[2][6] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.014      ; 5.307      ;
+; 5.313 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[5][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.328      ;
+; 5.314 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[6][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.329      ;
+; 5.330 ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[0][2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.345      ;
+; 5.333 ; RegisterFile:Registers|RegFile[2][1] ; RegisterFile:Registers|RegFile[1][2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.348      ;
+; 5.340 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[7][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.355      ;
+; 5.377 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[4][8] ; Clock        ; Clock       ; 0.000        ; -0.014     ; 5.378      ;
+; 5.378 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[7][8] ; Clock        ; Clock       ; 0.000        ; -0.014     ; 5.379      ;
+; 5.397 ; RegisterFile:Registers|RegFile[7][8] ; RegisterFile:Registers|RegFile[6][9] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.412      ;
+; 5.484 ; RegisterFile:Registers|RegFile[6][2] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.499      ;
+; 5.484 ; RegisterFile:Registers|RegFile[6][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.499      ;
+; 5.494 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[7][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.509      ;
+; 5.494 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[4][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.509      ;
+; 5.507 ; RegisterFile:Registers|RegFile[1][3] ; RegisterFile:Registers|RegFile[4][4] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.550      ;
+; 5.514 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[4][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.529      ;
+; 5.515 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[7][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.530      ;
+; 5.541 ; RegisterFile:Registers|RegFile[0][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; -0.014     ; 5.542      ;
+; 5.587 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[0][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.602      ;
+; 5.588 ; RegisterFile:Registers|RegFile[7][7] ; RegisterFile:Registers|RegFile[1][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.603      ;
+; 5.609 ; RegisterFile:Registers|RegFile[7][5] ; RegisterFile:Registers|RegFile[6][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.624      ;
+; 5.624 ; RegisterFile:Registers|RegFile[5][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.639      ;
+; 5.625 ; RegisterFile:Registers|RegFile[6][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.640      ;
+; 5.642 ; RegisterFile:Registers|RegFile[2][6] ; RegisterFile:Registers|RegFile[6][7] ; Clock        ; Clock       ; 0.000        ; 0.014      ; 5.671      ;
+; 5.644 ; RegisterFile:Registers|RegFile[2][8] ; RegisterFile:Registers|RegFile[5][9] ; Clock        ; Clock       ; 0.000        ; -0.014     ; 5.645      ;
+; 5.666 ; RegisterFile:Registers|RegFile[7][3] ; RegisterFile:Registers|RegFile[7][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.681      ;
+; 5.667 ; RegisterFile:Registers|RegFile[7][3] ; RegisterFile:Registers|RegFile[4][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.682      ;
+; 5.670 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.685      ;
+; 5.670 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.685      ;
+; 5.673 ; RegisterFile:Registers|RegFile[5][2] ; RegisterFile:Registers|RegFile[7][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.688      ;
+; 5.674 ; RegisterFile:Registers|RegFile[5][2] ; RegisterFile:Registers|RegFile[4][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.689      ;
+; 5.682 ; RegisterFile:Registers|RegFile[5][7] ; RegisterFile:Registers|RegFile[6][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.697      ;
+; 5.683 ; RegisterFile:Registers|RegFile[6][7] ; RegisterFile:Registers|RegFile[6][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.698      ;
+; 5.691 ; RegisterFile:Registers|RegFile[2][7] ; RegisterFile:Registers|RegFile[5][8] ; Clock        ; Clock       ; 0.000        ; 0.014      ; 5.720      ;
+; 5.694 ; RegisterFile:Registers|RegFile[5][0] ; RegisterFile:Registers|RegFile[2][1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.709      ;
+; 5.697 ; RegisterFile:Registers|RegFile[5][0] ; RegisterFile:Registers|RegFile[1][1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.712      ;
+; 5.716 ; RegisterFile:Registers|RegFile[3][8] ; RegisterFile:Registers|RegFile[5][9] ; Clock        ; Clock       ; 0.000        ; -0.014     ; 5.717      ;
+; 5.766 ; RegisterFile:Registers|RegFile[6][5] ; RegisterFile:Registers|RegFile[5][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.781      ;
+; 5.768 ; RegisterFile:Registers|RegFile[5][3] ; RegisterFile:Registers|RegFile[4][4] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.783      ;
+; 5.771 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[7][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.814      ;
+; 5.772 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[4][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.815      ;
+; 5.780 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[2][1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.795      ;
+; 5.783 ; RegisterFile:Registers|RegFile[2][0] ; RegisterFile:Registers|RegFile[1][1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.798      ;
+; 5.793 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[7][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.808      ;
+; 5.794 ; RegisterFile:Registers|RegFile[2][2] ; RegisterFile:Registers|RegFile[4][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.809      ;
+; 5.796 ; RegisterFile:Registers|RegFile[3][1] ; RegisterFile:Registers|RegFile[5][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.839      ;
+; 5.797 ; RegisterFile:Registers|RegFile[3][1] ; RegisterFile:Registers|RegFile[6][2] ; Clock        ; Clock       ; 0.000        ; 0.028      ; 5.840      ;
+; 5.800 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[0][4] ; Clock        ; Clock       ; 0.000        ; -0.028     ; 5.787      ;
+; 5.802 ; RegisterFile:Registers|RegFile[2][3] ; RegisterFile:Registers|RegFile[1][4] ; Clock        ; Clock       ; 0.000        ; -0.028     ; 5.789      ;
+; 5.808 ; RegisterFile:Registers|RegFile[3][2] ; RegisterFile:Registers|RegFile[6][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.823      ;
+; 5.808 ; RegisterFile:Registers|RegFile[3][2] ; RegisterFile:Registers|RegFile[5][3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.823      ;
+; 5.812 ; RegisterFile:Registers|RegFile[3][7] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.014      ; 5.841      ;
+; 5.854 ; RegisterFile:Registers|RegFile[3][6] ; RegisterFile:Registers|RegFile[5][7] ; Clock        ; Clock       ; 0.000        ; 0.014      ; 5.883      ;
+; 5.859 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[2][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.874      ;
+; 5.860 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[0][2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.875      ;
+; 5.861 ; RegisterFile:Registers|RegFile[4][7] ; RegisterFile:Registers|RegFile[5][8] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.876      ;
+; 5.861 ; RegisterFile:Registers|RegFile[3][5] ; RegisterFile:Registers|RegFile[3][6] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.876      ;
+; 5.863 ; RegisterFile:Registers|RegFile[1][1] ; RegisterFile:Registers|RegFile[1][2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.878      ;
 +-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -373,6 +373,10 @@ No paths to report.
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[0][6] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[0][7] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[0][7] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[0][8] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[0][8] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[0][9] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[0][9] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][1] ;
@@ -389,6 +393,10 @@ No paths to report.
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][6] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][7] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][7] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][8] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][8] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][9] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[1][9] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][1] ;
@@ -405,6 +413,10 @@ No paths to report.
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][6] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][7] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][7] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][8] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][8] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][9] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[2][9] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][1] ;
@@ -421,6 +433,10 @@ No paths to report.
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][6] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][7] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][7] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][8] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][8] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][9] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[3][9] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][0] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][1] ;
@@ -437,25 +453,9 @@ No paths to report.
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][6] ;
 ; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][7] ;
 ; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][7] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][0] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][0] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][1] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][1] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][2] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][2] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][3] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][3] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][4] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][4] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][5] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][5] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][6] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][6] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][7] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[5][7] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[6][0] ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[6][0] ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[6][1] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][8] ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][8] ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; Clock ; Rise       ; RegisterFile:Registers|RegFile[4][9] ;
 +--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
 
 
@@ -464,85 +464,93 @@ No paths to report.
 +-------------------+------------+--------+--------+------------+-----------------+
 ; Data Port         ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------------+------------+--------+--------+------------+-----------------+
-; Const[*]          ; Clock      ; 13.280 ; 13.280 ; Rise       ; Clock           ;
-;  Const[0]         ; Clock      ; 13.280 ; 13.280 ; Rise       ; Clock           ;
-;  Const[1]         ; Clock      ; 12.818 ; 12.818 ; Rise       ; Clock           ;
-;  Const[2]         ; Clock      ; 12.491 ; 12.491 ; Rise       ; Clock           ;
-;  Const[3]         ; Clock      ; 10.924 ; 10.924 ; Rise       ; Clock           ;
-;  Const[4]         ; Clock      ; 12.338 ; 12.338 ; Rise       ; Clock           ;
-;  Const[5]         ; Clock      ; 11.678 ; 11.678 ; Rise       ; Clock           ;
-;  Const[6]         ; Clock      ; 11.993 ; 11.993 ; Rise       ; Clock           ;
-;  Const[7]         ; Clock      ; 10.364 ; 10.364 ; Rise       ; Clock           ;
-; Control_Word[*]   ; Clock      ; 17.559 ; 17.559 ; Rise       ; Clock           ;
-;  Control_Word[0]  ; Clock      ; 9.621  ; 9.621  ; Rise       ; Clock           ;
-;  Control_Word[1]  ; Clock      ; 9.730  ; 9.730  ; Rise       ; Clock           ;
-;  Control_Word[2]  ; Clock      ; 13.046 ; 13.046 ; Rise       ; Clock           ;
-;  Control_Word[3]  ; Clock      ; 12.101 ; 12.101 ; Rise       ; Clock           ;
-;  Control_Word[4]  ; Clock      ; 11.539 ; 11.539 ; Rise       ; Clock           ;
-;  Control_Word[5]  ; Clock      ; 8.673  ; 8.673  ; Rise       ; Clock           ;
-;  Control_Word[6]  ; Clock      ; 13.449 ; 13.449 ; Rise       ; Clock           ;
-;  Control_Word[7]  ; Clock      ; 17.559 ; 17.559 ; Rise       ; Clock           ;
-;  Control_Word[8]  ; Clock      ; 16.067 ; 16.067 ; Rise       ; Clock           ;
-;  Control_Word[9]  ; Clock      ; 13.073 ; 13.073 ; Rise       ; Clock           ;
-;  Control_Word[10] ; Clock      ; 15.990 ; 15.990 ; Rise       ; Clock           ;
-;  Control_Word[11] ; Clock      ; 16.990 ; 16.990 ; Rise       ; Clock           ;
-;  Control_Word[12] ; Clock      ; 13.584 ; 13.584 ; Rise       ; Clock           ;
-;  Control_Word[13] ; Clock      ; 8.743  ; 8.743  ; Rise       ; Clock           ;
-;  Control_Word[14] ; Clock      ; 10.470 ; 10.470 ; Rise       ; Clock           ;
-;  Control_Word[15] ; Clock      ; 8.832  ; 8.832  ; Rise       ; Clock           ;
-; RAM_Data_in[*]    ; Clock      ; 8.911  ; 8.911  ; Rise       ; Clock           ;
-;  RAM_Data_in[0]   ; Clock      ; 8.272  ; 8.272  ; Rise       ; Clock           ;
-;  RAM_Data_in[1]   ; Clock      ; 8.569  ; 8.569  ; Rise       ; Clock           ;
-;  RAM_Data_in[2]   ; Clock      ; 6.916  ; 6.916  ; Rise       ; Clock           ;
-;  RAM_Data_in[3]   ; Clock      ; 6.639  ; 6.639  ; Rise       ; Clock           ;
-;  RAM_Data_in[4]   ; Clock      ; 7.531  ; 7.531  ; Rise       ; Clock           ;
-;  RAM_Data_in[5]   ; Clock      ; 8.133  ; 8.133  ; Rise       ; Clock           ;
-;  RAM_Data_in[6]   ; Clock      ; 6.851  ; 6.851  ; Rise       ; Clock           ;
-;  RAM_Data_in[7]   ; Clock      ; 8.911  ; 8.911  ; Rise       ; Clock           ;
+; Const[*]          ; Clock      ; 16.836 ; 16.836 ; Rise       ; Clock           ;
+;  Const[0]         ; Clock      ; 16.553 ; 16.553 ; Rise       ; Clock           ;
+;  Const[1]         ; Clock      ; 15.871 ; 15.871 ; Rise       ; Clock           ;
+;  Const[2]         ; Clock      ; 16.836 ; 16.836 ; Rise       ; Clock           ;
+;  Const[3]         ; Clock      ; 14.957 ; 14.957 ; Rise       ; Clock           ;
+;  Const[4]         ; Clock      ; 14.610 ; 14.610 ; Rise       ; Clock           ;
+;  Const[5]         ; Clock      ; 14.066 ; 14.066 ; Rise       ; Clock           ;
+;  Const[6]         ; Clock      ; 13.769 ; 13.769 ; Rise       ; Clock           ;
+;  Const[7]         ; Clock      ; 13.020 ; 13.020 ; Rise       ; Clock           ;
+;  Const[8]         ; Clock      ; 13.459 ; 13.459 ; Rise       ; Clock           ;
+;  Const[9]         ; Clock      ; 12.700 ; 12.700 ; Rise       ; Clock           ;
+; Control_Word[*]   ; Clock      ; 19.956 ; 19.956 ; Rise       ; Clock           ;
+;  Control_Word[0]  ; Clock      ; 9.583  ; 9.583  ; Rise       ; Clock           ;
+;  Control_Word[1]  ; Clock      ; 10.150 ; 10.150 ; Rise       ; Clock           ;
+;  Control_Word[2]  ; Clock      ; 14.441 ; 14.441 ; Rise       ; Clock           ;
+;  Control_Word[3]  ; Clock      ; 16.336 ; 16.336 ; Rise       ; Clock           ;
+;  Control_Word[4]  ; Clock      ; 16.052 ; 16.052 ; Rise       ; Clock           ;
+;  Control_Word[5]  ; Clock      ; 12.870 ; 12.870 ; Rise       ; Clock           ;
+;  Control_Word[6]  ; Clock      ; 17.790 ; 17.790 ; Rise       ; Clock           ;
+;  Control_Word[7]  ; Clock      ; 19.956 ; 19.956 ; Rise       ; Clock           ;
+;  Control_Word[8]  ; Clock      ; 19.750 ; 19.750 ; Rise       ; Clock           ;
+;  Control_Word[9]  ; Clock      ; 17.162 ; 17.162 ; Rise       ; Clock           ;
+;  Control_Word[10] ; Clock      ; 19.696 ; 19.696 ; Rise       ; Clock           ;
+;  Control_Word[11] ; Clock      ; 19.763 ; 19.763 ; Rise       ; Clock           ;
+;  Control_Word[12] ; Clock      ; 16.812 ; 16.812 ; Rise       ; Clock           ;
+;  Control_Word[13] ; Clock      ; 10.521 ; 10.521 ; Rise       ; Clock           ;
+;  Control_Word[14] ; Clock      ; 9.939  ; 9.939  ; Rise       ; Clock           ;
+;  Control_Word[15] ; Clock      ; 9.690  ; 9.690  ; Rise       ; Clock           ;
+; RAM_Data_in[*]    ; Clock      ; 8.372  ; 8.372  ; Rise       ; Clock           ;
+;  RAM_Data_in[0]   ; Clock      ; 6.736  ; 6.736  ; Rise       ; Clock           ;
+;  RAM_Data_in[1]   ; Clock      ; 7.479  ; 7.479  ; Rise       ; Clock           ;
+;  RAM_Data_in[2]   ; Clock      ; 8.354  ; 8.354  ; Rise       ; Clock           ;
+;  RAM_Data_in[3]   ; Clock      ; 7.835  ; 7.835  ; Rise       ; Clock           ;
+;  RAM_Data_in[4]   ; Clock      ; 7.639  ; 7.639  ; Rise       ; Clock           ;
+;  RAM_Data_in[5]   ; Clock      ; 6.692  ; 6.692  ; Rise       ; Clock           ;
+;  RAM_Data_in[6]   ; Clock      ; 8.372  ; 8.372  ; Rise       ; Clock           ;
+;  RAM_Data_in[7]   ; Clock      ; 6.880  ; 6.880  ; Rise       ; Clock           ;
+;  RAM_Data_in[8]   ; Clock      ; 6.869  ; 6.869  ; Rise       ; Clock           ;
+;  RAM_Data_in[9]   ; Clock      ; 6.736  ; 6.736  ; Rise       ; Clock           ;
 +-------------------+------------+--------+--------+------------+-----------------+
 
 
-+---------------------------------------------------------------------------------+
-; Hold Times                                                                      ;
-+-------------------+------------+--------+--------+------------+-----------------+
-; Data Port         ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-------------------+------------+--------+--------+------------+-----------------+
-; Const[*]          ; Clock      ; -6.614 ; -6.614 ; Rise       ; Clock           ;
-;  Const[0]         ; Clock      ; -8.435 ; -8.435 ; Rise       ; Clock           ;
-;  Const[1]         ; Clock      ; -8.358 ; -8.358 ; Rise       ; Clock           ;
-;  Const[2]         ; Clock      ; -7.518 ; -7.518 ; Rise       ; Clock           ;
-;  Const[3]         ; Clock      ; -6.665 ; -6.665 ; Rise       ; Clock           ;
-;  Const[4]         ; Clock      ; -6.614 ; -6.614 ; Rise       ; Clock           ;
-;  Const[5]         ; Clock      ; -7.363 ; -7.363 ; Rise       ; Clock           ;
-;  Const[6]         ; Clock      ; -9.736 ; -9.736 ; Rise       ; Clock           ;
-;  Const[7]         ; Clock      ; -8.714 ; -8.714 ; Rise       ; Clock           ;
-; Control_Word[*]   ; Clock      ; -4.764 ; -4.764 ; Rise       ; Clock           ;
-;  Control_Word[0]  ; Clock      ; -6.968 ; -6.968 ; Rise       ; Clock           ;
-;  Control_Word[1]  ; Clock      ; -4.764 ; -4.764 ; Rise       ; Clock           ;
-;  Control_Word[2]  ; Clock      ; -7.622 ; -7.622 ; Rise       ; Clock           ;
-;  Control_Word[3]  ; Clock      ; -5.790 ; -5.790 ; Rise       ; Clock           ;
-;  Control_Word[4]  ; Clock      ; -6.222 ; -6.222 ; Rise       ; Clock           ;
-;  Control_Word[5]  ; Clock      ; -4.931 ; -4.931 ; Rise       ; Clock           ;
-;  Control_Word[6]  ; Clock      ; -6.219 ; -6.219 ; Rise       ; Clock           ;
-;  Control_Word[7]  ; Clock      ; -8.891 ; -8.891 ; Rise       ; Clock           ;
-;  Control_Word[8]  ; Clock      ; -7.570 ; -7.570 ; Rise       ; Clock           ;
-;  Control_Word[9]  ; Clock      ; -6.956 ; -6.956 ; Rise       ; Clock           ;
-;  Control_Word[10] ; Clock      ; -8.673 ; -8.673 ; Rise       ; Clock           ;
-;  Control_Word[11] ; Clock      ; -9.137 ; -9.137 ; Rise       ; Clock           ;
-;  Control_Word[12] ; Clock      ; -7.495 ; -7.495 ; Rise       ; Clock           ;
-;  Control_Word[13] ; Clock      ; -5.731 ; -5.731 ; Rise       ; Clock           ;
-;  Control_Word[14] ; Clock      ; -8.108 ; -8.108 ; Rise       ; Clock           ;
-;  Control_Word[15] ; Clock      ; -6.361 ; -6.361 ; Rise       ; Clock           ;
-; RAM_Data_in[*]    ; Clock      ; -4.989 ; -4.989 ; Rise       ; Clock           ;
-;  RAM_Data_in[0]   ; Clock      ; -7.085 ; -7.085 ; Rise       ; Clock           ;
-;  RAM_Data_in[1]   ; Clock      ; -7.660 ; -7.660 ; Rise       ; Clock           ;
-;  RAM_Data_in[2]   ; Clock      ; -5.265 ; -5.265 ; Rise       ; Clock           ;
-;  RAM_Data_in[3]   ; Clock      ; -4.989 ; -4.989 ; Rise       ; Clock           ;
-;  RAM_Data_in[4]   ; Clock      ; -5.963 ; -5.963 ; Rise       ; Clock           ;
-;  RAM_Data_in[5]   ; Clock      ; -6.453 ; -6.453 ; Rise       ; Clock           ;
-;  RAM_Data_in[6]   ; Clock      ; -5.176 ; -5.176 ; Rise       ; Clock           ;
-;  RAM_Data_in[7]   ; Clock      ; -7.319 ; -7.319 ; Rise       ; Clock           ;
-+-------------------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------------------+
+; Hold Times                                                                        ;
++-------------------+------------+---------+---------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++-------------------+------------+---------+---------+------------+-----------------+
+; Const[*]          ; Clock      ; -6.927  ; -6.927  ; Rise       ; Clock           ;
+;  Const[0]         ; Clock      ; -7.497  ; -7.497  ; Rise       ; Clock           ;
+;  Const[1]         ; Clock      ; -8.404  ; -8.404  ; Rise       ; Clock           ;
+;  Const[2]         ; Clock      ; -9.683  ; -9.683  ; Rise       ; Clock           ;
+;  Const[3]         ; Clock      ; -9.061  ; -9.061  ; Rise       ; Clock           ;
+;  Const[4]         ; Clock      ; -9.302  ; -9.302  ; Rise       ; Clock           ;
+;  Const[5]         ; Clock      ; -6.927  ; -6.927  ; Rise       ; Clock           ;
+;  Const[6]         ; Clock      ; -7.872  ; -7.872  ; Rise       ; Clock           ;
+;  Const[7]         ; Clock      ; -7.116  ; -7.116  ; Rise       ; Clock           ;
+;  Const[8]         ; Clock      ; -8.537  ; -8.537  ; Rise       ; Clock           ;
+;  Const[9]         ; Clock      ; -10.824 ; -10.824 ; Rise       ; Clock           ;
+; Control_Word[*]   ; Clock      ; -4.746  ; -4.746  ; Rise       ; Clock           ;
+;  Control_Word[0]  ; Clock      ; -6.412  ; -6.412  ; Rise       ; Clock           ;
+;  Control_Word[1]  ; Clock      ; -6.255  ; -6.255  ; Rise       ; Clock           ;
+;  Control_Word[2]  ; Clock      ; -9.382  ; -9.382  ; Rise       ; Clock           ;
+;  Control_Word[3]  ; Clock      ; -4.746  ; -4.746  ; Rise       ; Clock           ;
+;  Control_Word[4]  ; Clock      ; -8.027  ; -8.027  ; Rise       ; Clock           ;
+;  Control_Word[5]  ; Clock      ; -8.013  ; -8.013  ; Rise       ; Clock           ;
+;  Control_Word[6]  ; Clock      ; -6.762  ; -6.762  ; Rise       ; Clock           ;
+;  Control_Word[7]  ; Clock      ; -10.180 ; -10.180 ; Rise       ; Clock           ;
+;  Control_Word[8]  ; Clock      ; -9.327  ; -9.327  ; Rise       ; Clock           ;
+;  Control_Word[9]  ; Clock      ; -8.115  ; -8.115  ; Rise       ; Clock           ;
+;  Control_Word[10] ; Clock      ; -9.094  ; -9.094  ; Rise       ; Clock           ;
+;  Control_Word[11] ; Clock      ; -10.437 ; -10.437 ; Rise       ; Clock           ;
+;  Control_Word[12] ; Clock      ; -8.731  ; -8.731  ; Rise       ; Clock           ;
+;  Control_Word[13] ; Clock      ; -7.350  ; -7.350  ; Rise       ; Clock           ;
+;  Control_Word[14] ; Clock      ; -6.772  ; -6.772  ; Rise       ; Clock           ;
+;  Control_Word[15] ; Clock      ; -6.515  ; -6.515  ; Rise       ; Clock           ;
+; RAM_Data_in[*]    ; Clock      ; -5.031  ; -5.031  ; Rise       ; Clock           ;
+;  RAM_Data_in[0]   ; Clock      ; -5.883  ; -5.883  ; Rise       ; Clock           ;
+;  RAM_Data_in[1]   ; Clock      ; -6.010  ; -6.010  ; Rise       ; Clock           ;
+;  RAM_Data_in[2]   ; Clock      ; -6.409  ; -6.409  ; Rise       ; Clock           ;
+;  RAM_Data_in[3]   ; Clock      ; -6.230  ; -6.230  ; Rise       ; Clock           ;
+;  RAM_Data_in[4]   ; Clock      ; -5.222  ; -5.222  ; Rise       ; Clock           ;
+;  RAM_Data_in[5]   ; Clock      ; -5.095  ; -5.095  ; Rise       ; Clock           ;
+;  RAM_Data_in[6]   ; Clock      ; -5.897  ; -5.897  ; Rise       ; Clock           ;
+;  RAM_Data_in[7]   ; Clock      ; -5.228  ; -5.228  ; Rise       ; Clock           ;
+;  RAM_Data_in[8]   ; Clock      ; -5.221  ; -5.221  ; Rise       ; Clock           ;
+;  RAM_Data_in[9]   ; Clock      ; -5.031  ; -5.031  ; Rise       ; Clock           ;
++-------------------+------------+---------+---------+------------+-----------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -550,26 +558,30 @@ No paths to report.
 +------------------+------------+--------+--------+------------+-----------------+
 ; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------------+------------+--------+--------+------------+-----------------+
-; Cout             ; Clock      ; 18.025 ; 18.025 ; Rise       ; Clock           ;
-; RAM_Addr_out[*]  ; Clock      ; 12.439 ; 12.439 ; Rise       ; Clock           ;
-;  RAM_Addr_out[0] ; Clock      ; 11.997 ; 11.997 ; Rise       ; Clock           ;
-;  RAM_Addr_out[1] ; Clock      ; 10.205 ; 10.205 ; Rise       ; Clock           ;
-;  RAM_Addr_out[2] ; Clock      ; 11.221 ; 11.221 ; Rise       ; Clock           ;
-;  RAM_Addr_out[3] ; Clock      ; 10.626 ; 10.626 ; Rise       ; Clock           ;
-;  RAM_Addr_out[4] ; Clock      ; 10.892 ; 10.892 ; Rise       ; Clock           ;
-;  RAM_Addr_out[5] ; Clock      ; 10.001 ; 10.001 ; Rise       ; Clock           ;
-;  RAM_Addr_out[6] ; Clock      ; 11.073 ; 11.073 ; Rise       ; Clock           ;
-;  RAM_Addr_out[7] ; Clock      ; 12.439 ; 12.439 ; Rise       ; Clock           ;
-; RAM_Data_out[*]  ; Clock      ; 13.324 ; 13.324 ; Rise       ; Clock           ;
-;  RAM_Data_out[0] ; Clock      ; 11.590 ; 11.590 ; Rise       ; Clock           ;
-;  RAM_Data_out[1] ; Clock      ; 11.907 ; 11.907 ; Rise       ; Clock           ;
-;  RAM_Data_out[2] ; Clock      ; 11.330 ; 11.330 ; Rise       ; Clock           ;
-;  RAM_Data_out[3] ; Clock      ; 10.773 ; 10.773 ; Rise       ; Clock           ;
-;  RAM_Data_out[4] ; Clock      ; 10.049 ; 10.049 ; Rise       ; Clock           ;
-;  RAM_Data_out[5] ; Clock      ; 11.488 ; 11.488 ; Rise       ; Clock           ;
-;  RAM_Data_out[6] ; Clock      ; 10.713 ; 10.713 ; Rise       ; Clock           ;
-;  RAM_Data_out[7] ; Clock      ; 13.324 ; 13.324 ; Rise       ; Clock           ;
-; Z                ; Clock      ; 21.006 ; 21.006 ; Rise       ; Clock           ;
+; Cout             ; Clock      ; 20.172 ; 20.172 ; Rise       ; Clock           ;
+; RAM_Addr_out[*]  ; Clock      ; 12.915 ; 12.915 ; Rise       ; Clock           ;
+;  RAM_Addr_out[0] ; Clock      ; 11.269 ; 11.269 ; Rise       ; Clock           ;
+;  RAM_Addr_out[1] ; Clock      ; 11.771 ; 11.771 ; Rise       ; Clock           ;
+;  RAM_Addr_out[2] ; Clock      ; 9.832  ; 9.832  ; Rise       ; Clock           ;
+;  RAM_Addr_out[3] ; Clock      ; 10.860 ; 10.860 ; Rise       ; Clock           ;
+;  RAM_Addr_out[4] ; Clock      ; 12.313 ; 12.313 ; Rise       ; Clock           ;
+;  RAM_Addr_out[5] ; Clock      ; 11.748 ; 11.748 ; Rise       ; Clock           ;
+;  RAM_Addr_out[6] ; Clock      ; 12.867 ; 12.867 ; Rise       ; Clock           ;
+;  RAM_Addr_out[7] ; Clock      ; 12.464 ; 12.464 ; Rise       ; Clock           ;
+;  RAM_Addr_out[8] ; Clock      ; 12.915 ; 12.915 ; Rise       ; Clock           ;
+;  RAM_Addr_out[9] ; Clock      ; 11.705 ; 11.705 ; Rise       ; Clock           ;
+; RAM_Data_out[*]  ; Clock      ; 13.681 ; 13.681 ; Rise       ; Clock           ;
+;  RAM_Data_out[0] ; Clock      ; 12.252 ; 12.252 ; Rise       ; Clock           ;
+;  RAM_Data_out[1] ; Clock      ; 12.285 ; 12.285 ; Rise       ; Clock           ;
+;  RAM_Data_out[2] ; Clock      ; 10.588 ; 10.588 ; Rise       ; Clock           ;
+;  RAM_Data_out[3] ; Clock      ; 12.263 ; 12.263 ; Rise       ; Clock           ;
+;  RAM_Data_out[4] ; Clock      ; 13.681 ; 13.681 ; Rise       ; Clock           ;
+;  RAM_Data_out[5] ; Clock      ; 12.628 ; 12.628 ; Rise       ; Clock           ;
+;  RAM_Data_out[6] ; Clock      ; 12.688 ; 12.688 ; Rise       ; Clock           ;
+;  RAM_Data_out[7] ; Clock      ; 13.133 ; 13.133 ; Rise       ; Clock           ;
+;  RAM_Data_out[8] ; Clock      ; 12.705 ; 12.705 ; Rise       ; Clock           ;
+;  RAM_Data_out[9] ; Clock      ; 11.850 ; 11.850 ; Rise       ; Clock           ;
+; Z                ; Clock      ; 24.031 ; 24.031 ; Rise       ; Clock           ;
 +------------------+------------+--------+--------+------------+-----------------+
 
 
@@ -578,26 +590,30 @@ No paths to report.
 +------------------+------------+--------+--------+------------+-----------------+
 ; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------------+------------+--------+--------+------------+-----------------+
-; Cout             ; Clock      ; 11.163 ; 11.163 ; Rise       ; Clock           ;
-; RAM_Addr_out[*]  ; Clock      ; 7.684  ; 7.684  ; Rise       ; Clock           ;
-;  RAM_Addr_out[0] ; Clock      ; 9.961  ; 9.961  ; Rise       ; Clock           ;
-;  RAM_Addr_out[1] ; Clock      ; 8.202  ; 8.202  ; Rise       ; Clock           ;
-;  RAM_Addr_out[2] ; Clock      ; 9.636  ; 9.636  ; Rise       ; Clock           ;
-;  RAM_Addr_out[3] ; Clock      ; 9.029  ; 9.029  ; Rise       ; Clock           ;
-;  RAM_Addr_out[4] ; Clock      ; 8.635  ; 8.635  ; Rise       ; Clock           ;
-;  RAM_Addr_out[5] ; Clock      ; 7.684  ; 7.684  ; Rise       ; Clock           ;
-;  RAM_Addr_out[6] ; Clock      ; 9.128  ; 9.128  ; Rise       ; Clock           ;
-;  RAM_Addr_out[7] ; Clock      ; 10.351 ; 10.351 ; Rise       ; Clock           ;
-; RAM_Data_out[*]  ; Clock      ; 8.035  ; 8.035  ; Rise       ; Clock           ;
-;  RAM_Data_out[0] ; Clock      ; 9.531  ; 9.531  ; Rise       ; Clock           ;
-;  RAM_Data_out[1] ; Clock      ; 10.092 ; 10.092 ; Rise       ; Clock           ;
-;  RAM_Data_out[2] ; Clock      ; 8.921  ; 8.921  ; Rise       ; Clock           ;
-;  RAM_Data_out[3] ; Clock      ; 8.035  ; 8.035  ; Rise       ; Clock           ;
-;  RAM_Data_out[4] ; Clock      ; 8.223  ; 8.223  ; Rise       ; Clock           ;
-;  RAM_Data_out[5] ; Clock      ; 9.501  ; 9.501  ; Rise       ; Clock           ;
-;  RAM_Data_out[6] ; Clock      ; 8.068  ; 8.068  ; Rise       ; Clock           ;
-;  RAM_Data_out[7] ; Clock      ; 9.642  ; 9.642  ; Rise       ; Clock           ;
-; Z                ; Clock      ; 12.823 ; 12.823 ; Rise       ; Clock           ;
+; Cout             ; Clock      ; 12.379 ; 12.379 ; Rise       ; Clock           ;
+; RAM_Addr_out[*]  ; Clock      ; 7.512  ; 7.512  ; Rise       ; Clock           ;
+;  RAM_Addr_out[0] ; Clock      ; 8.810  ; 8.810  ; Rise       ; Clock           ;
+;  RAM_Addr_out[1] ; Clock      ; 9.026  ; 9.026  ; Rise       ; Clock           ;
+;  RAM_Addr_out[2] ; Clock      ; 7.512  ; 7.512  ; Rise       ; Clock           ;
+;  RAM_Addr_out[3] ; Clock      ; 9.092  ; 9.092  ; Rise       ; Clock           ;
+;  RAM_Addr_out[4] ; Clock      ; 9.742  ; 9.742  ; Rise       ; Clock           ;
+;  RAM_Addr_out[5] ; Clock      ; 9.798  ; 9.798  ; Rise       ; Clock           ;
+;  RAM_Addr_out[6] ; Clock      ; 10.449 ; 10.449 ; Rise       ; Clock           ;
+;  RAM_Addr_out[7] ; Clock      ; 8.702  ; 8.702  ; Rise       ; Clock           ;
+;  RAM_Addr_out[8] ; Clock      ; 10.050 ; 10.050 ; Rise       ; Clock           ;
+;  RAM_Addr_out[9] ; Clock      ; 9.953  ; 9.953  ; Rise       ; Clock           ;
+; RAM_Data_out[*]  ; Clock      ; 8.810  ; 8.810  ; Rise       ; Clock           ;
+;  RAM_Data_out[0] ; Clock      ; 10.806 ; 10.806 ; Rise       ; Clock           ;
+;  RAM_Data_out[1] ; Clock      ; 9.621  ; 9.621  ; Rise       ; Clock           ;
+;  RAM_Data_out[2] ; Clock      ; 8.903  ; 8.903  ; Rise       ; Clock           ;
+;  RAM_Data_out[3] ; Clock      ; 9.496  ; 9.496  ; Rise       ; Clock           ;
+;  RAM_Data_out[4] ; Clock      ; 11.021 ; 11.021 ; Rise       ; Clock           ;
+;  RAM_Data_out[5] ; Clock      ; 9.951  ; 9.951  ; Rise       ; Clock           ;
+;  RAM_Data_out[6] ; Clock      ; 10.373 ; 10.373 ; Rise       ; Clock           ;
+;  RAM_Data_out[7] ; Clock      ; 8.810  ; 8.810  ; Rise       ; Clock           ;
+;  RAM_Data_out[8] ; Clock      ; 9.948  ; 9.948  ; Rise       ; Clock           ;
+;  RAM_Data_out[9] ; Clock      ; 9.184  ; 9.184  ; Rise       ; Clock           ;
+; Z                ; Clock      ; 13.876 ; 13.876 ; Rise       ; Clock           ;
 +------------------+------------+--------+--------+------------+-----------------+
 
 
@@ -606,107 +622,127 @@ No paths to report.
 +------------------+-----------------+--------+----+----+--------+
 ; Input Port       ; Output Port     ; RR     ; RF ; FR ; FF     ;
 +------------------+-----------------+--------+----+----+--------+
-; Const[0]         ; Cout            ; 19.956 ;    ;    ; 19.956 ;
-; Const[0]         ; RAM_Data_out[0] ; 11.876 ;    ;    ; 11.876 ;
-; Const[0]         ; Z               ; 22.937 ;    ;    ; 22.937 ;
-; Const[1]         ; Cout            ; 19.494 ;    ;    ; 19.494 ;
-; Const[1]         ; RAM_Data_out[1] ; 13.376 ;    ;    ; 13.376 ;
-; Const[1]         ; Z               ; 22.475 ;    ;    ; 22.475 ;
-; Const[2]         ; Cout            ; 19.167 ;    ;    ; 19.167 ;
-; Const[2]         ; RAM_Data_out[2] ; 12.663 ;    ;    ; 12.663 ;
-; Const[2]         ; Z               ; 22.148 ;    ;    ; 22.148 ;
-; Const[3]         ; Cout            ; 17.600 ;    ;    ; 17.600 ;
-; Const[3]         ; RAM_Data_out[3] ; 10.864 ;    ;    ; 10.864 ;
-; Const[3]         ; Z               ; 20.581 ;    ;    ; 20.581 ;
-; Const[4]         ; Cout            ; 19.014 ;    ;    ; 19.014 ;
-; Const[4]         ; RAM_Data_out[4] ; 11.374 ;    ;    ; 11.374 ;
-; Const[4]         ; Z               ; 21.995 ;    ;    ; 21.995 ;
-; Const[5]         ; Cout            ; 17.533 ;    ;    ; 17.533 ;
-; Const[5]         ; RAM_Data_out[5] ; 13.063 ;    ;    ; 13.063 ;
-; Const[5]         ; Z               ; 21.335 ;    ;    ; 21.335 ;
-; Const[6]         ; Cout            ; 18.402 ;    ;    ; 18.402 ;
-; Const[6]         ; RAM_Data_out[6] ; 12.932 ;    ;    ; 12.932 ;
-; Const[6]         ; Z               ; 20.175 ;    ;    ; 20.175 ;
-; Const[7]         ; Cout            ; 15.838 ;    ;    ; 15.838 ;
-; Const[7]         ; RAM_Data_out[7] ; 14.317 ;    ;    ; 14.317 ;
-; Const[7]         ; Z               ; 19.070 ;    ;    ; 19.070 ;
-; Control_Word[2]  ; Cout            ; 19.722 ;    ;    ; 19.722 ;
-; Control_Word[2]  ; Z               ; 22.703 ;    ;    ; 22.703 ;
-; Control_Word[3]  ; Cout            ; 18.777 ;    ;    ; 18.777 ;
-; Control_Word[3]  ; Z               ; 21.758 ;    ;    ; 21.758 ;
-; Control_Word[4]  ; Cout            ; 18.215 ;    ;    ; 18.215 ;
-; Control_Word[4]  ; Z               ; 21.196 ;    ;    ; 21.196 ;
-; Control_Word[5]  ; Z               ; 17.396 ;    ;    ; 17.396 ;
-; Control_Word[6]  ; Cout            ; 20.125 ;    ;    ; 20.125 ;
-; Control_Word[6]  ; RAM_Data_out[0] ; 13.391 ;    ;    ; 13.391 ;
-; Control_Word[6]  ; RAM_Data_out[1] ; 14.007 ;    ;    ; 14.007 ;
-; Control_Word[6]  ; RAM_Data_out[2] ; 12.087 ;    ;    ; 12.087 ;
-; Control_Word[6]  ; RAM_Data_out[3] ; 10.460 ;    ;    ; 10.460 ;
-; Control_Word[6]  ; RAM_Data_out[4] ; 10.979 ;    ;    ; 10.979 ;
-; Control_Word[6]  ; RAM_Data_out[5] ; 12.349 ;    ;    ; 12.349 ;
-; Control_Word[6]  ; RAM_Data_out[6] ; 10.938 ;    ;    ; 10.938 ;
-; Control_Word[6]  ; RAM_Data_out[7] ; 12.778 ;    ;    ; 12.778 ;
-; Control_Word[6]  ; Z               ; 23.106 ;    ;    ; 23.106 ;
-; Control_Word[7]  ; Cout            ; 24.235 ;    ;    ; 24.235 ;
-; Control_Word[7]  ; RAM_Data_out[0] ; 18.424 ;    ;    ; 18.424 ;
-; Control_Word[7]  ; RAM_Data_out[1] ; 18.117 ;    ;    ; 18.117 ;
-; Control_Word[7]  ; RAM_Data_out[2] ; 17.367 ;    ;    ; 17.367 ;
-; Control_Word[7]  ; RAM_Data_out[3] ; 16.803 ;    ;    ; 16.803 ;
-; Control_Word[7]  ; RAM_Data_out[4] ; 15.235 ;    ;    ; 15.235 ;
-; Control_Word[7]  ; RAM_Data_out[5] ; 16.300 ;    ;    ; 16.300 ;
-; Control_Word[7]  ; RAM_Data_out[6] ; 16.744 ;    ;    ; 16.744 ;
-; Control_Word[7]  ; RAM_Data_out[7] ; 17.883 ;    ;    ; 17.883 ;
-; Control_Word[7]  ; Z               ; 27.216 ;    ;    ; 27.216 ;
-; Control_Word[8]  ; Cout            ; 22.743 ;    ;    ; 22.743 ;
-; Control_Word[8]  ; RAM_Data_out[0] ; 15.859 ;    ;    ; 15.859 ;
-; Control_Word[8]  ; RAM_Data_out[1] ; 16.625 ;    ;    ; 16.625 ;
-; Control_Word[8]  ; RAM_Data_out[2] ; 16.234 ;    ;    ; 16.234 ;
-; Control_Word[8]  ; RAM_Data_out[3] ; 15.677 ;    ;    ; 15.677 ;
-; Control_Word[8]  ; RAM_Data_out[4] ; 14.453 ;    ;    ; 14.453 ;
-; Control_Word[8]  ; RAM_Data_out[5] ; 15.814 ;    ;    ; 15.814 ;
-; Control_Word[8]  ; RAM_Data_out[6] ; 15.617 ;    ;    ; 15.617 ;
-; Control_Word[8]  ; RAM_Data_out[7] ; 17.109 ;    ;    ; 17.109 ;
-; Control_Word[8]  ; Z               ; 25.724 ;    ;    ; 25.724 ;
-; Control_Word[9]  ; Cout            ; 19.749 ;    ;    ; 19.749 ;
-; Control_Word[9]  ; RAM_Data_out[0] ; 13.431 ;    ;    ; 13.431 ;
-; Control_Word[9]  ; RAM_Data_out[1] ; 13.631 ;    ;    ; 13.631 ;
-; Control_Word[9]  ; RAM_Data_out[2] ; 12.868 ;    ;    ; 12.868 ;
-; Control_Word[9]  ; RAM_Data_out[3] ; 12.044 ;    ;    ; 12.044 ;
-; Control_Word[9]  ; RAM_Data_out[4] ; 11.716 ;    ;    ; 11.716 ;
-; Control_Word[9]  ; RAM_Data_out[5] ; 13.082 ;    ;    ; 13.082 ;
-; Control_Word[9]  ; RAM_Data_out[6] ; 12.260 ;    ;    ; 12.260 ;
-; Control_Word[9]  ; RAM_Data_out[7] ; 13.647 ;    ;    ; 13.647 ;
-; Control_Word[9]  ; Z               ; 22.730 ;    ;    ; 22.730 ;
-; Control_Word[10] ; Cout            ; 22.666 ;    ;    ; 22.666 ;
-; Control_Word[10] ; RAM_Addr_out[0] ; 16.559 ;    ;    ; 16.559 ;
-; Control_Word[10] ; RAM_Addr_out[1] ; 14.872 ;    ;    ; 14.872 ;
-; Control_Word[10] ; RAM_Addr_out[2] ; 15.966 ;    ;    ; 15.966 ;
-; Control_Word[10] ; RAM_Addr_out[3] ; 15.364 ;    ;    ; 15.364 ;
-; Control_Word[10] ; RAM_Addr_out[4] ; 15.213 ;    ;    ; 15.213 ;
-; Control_Word[10] ; RAM_Addr_out[5] ; 14.229 ;    ;    ; 14.229 ;
-; Control_Word[10] ; RAM_Addr_out[6] ; 16.061 ;    ;    ; 16.061 ;
-; Control_Word[10] ; RAM_Addr_out[7] ; 17.382 ;    ;    ; 17.382 ;
-; Control_Word[10] ; Z               ; 25.647 ;    ;    ; 25.647 ;
-; Control_Word[11] ; Cout            ; 23.666 ;    ;    ; 23.666 ;
-; Control_Word[11] ; RAM_Addr_out[0] ; 17.668 ;    ;    ; 17.668 ;
-; Control_Word[11] ; RAM_Addr_out[1] ; 15.872 ;    ;    ; 15.872 ;
-; Control_Word[11] ; RAM_Addr_out[2] ; 16.706 ;    ;    ; 16.706 ;
-; Control_Word[11] ; RAM_Addr_out[3] ; 16.112 ;    ;    ; 16.112 ;
-; Control_Word[11] ; RAM_Addr_out[4] ; 15.919 ;    ;    ; 15.919 ;
-; Control_Word[11] ; RAM_Addr_out[5] ; 15.021 ;    ;    ; 15.021 ;
-; Control_Word[11] ; RAM_Addr_out[6] ; 16.423 ;    ;    ; 16.423 ;
-; Control_Word[11] ; RAM_Addr_out[7] ; 18.169 ;    ;    ; 18.169 ;
-; Control_Word[11] ; Z               ; 26.647 ;    ;    ; 26.647 ;
-; Control_Word[12] ; Cout            ; 20.260 ;    ;    ; 20.260 ;
-; Control_Word[12] ; RAM_Addr_out[0] ; 14.278 ;    ;    ; 14.278 ;
-; Control_Word[12] ; RAM_Addr_out[1] ; 12.328 ;    ;    ; 12.328 ;
-; Control_Word[12] ; RAM_Addr_out[2] ; 13.857 ;    ;    ; 13.857 ;
-; Control_Word[12] ; RAM_Addr_out[3] ; 13.226 ;    ;    ; 13.226 ;
-; Control_Word[12] ; RAM_Addr_out[4] ; 12.616 ;    ;    ; 12.616 ;
-; Control_Word[12] ; RAM_Addr_out[5] ; 11.854 ;    ;    ; 11.854 ;
-; Control_Word[12] ; RAM_Addr_out[6] ; 11.721 ;    ;    ; 11.721 ;
-; Control_Word[12] ; RAM_Addr_out[7] ; 13.774 ;    ;    ; 13.774 ;
-; Control_Word[12] ; Z               ; 23.241 ;    ;    ; 23.241 ;
+; Const[0]         ; Cout            ; 21.974 ;    ;    ; 21.974 ;
+; Const[0]         ; RAM_Data_out[0] ; 12.609 ;    ;    ; 12.609 ;
+; Const[0]         ; Z               ; 25.833 ;    ;    ; 25.833 ;
+; Const[1]         ; Cout            ; 21.292 ;    ;    ; 21.292 ;
+; Const[1]         ; RAM_Data_out[1] ; 13.564 ;    ;    ; 13.564 ;
+; Const[1]         ; Z               ; 25.151 ;    ;    ; 25.151 ;
+; Const[2]         ; Cout            ; 22.257 ;    ;    ; 22.257 ;
+; Const[2]         ; RAM_Data_out[2] ; 13.639 ;    ;    ; 13.639 ;
+; Const[2]         ; Z               ; 26.116 ;    ;    ; 26.116 ;
+; Const[3]         ; Cout            ; 20.378 ;    ;    ; 20.378 ;
+; Const[3]         ; RAM_Data_out[3] ; 14.350 ;    ;    ; 14.350 ;
+; Const[3]         ; Z               ; 24.237 ;    ;    ; 24.237 ;
+; Const[4]         ; Cout            ; 20.031 ;    ;    ; 20.031 ;
+; Const[4]         ; RAM_Data_out[4] ; 14.266 ;    ;    ; 14.266 ;
+; Const[4]         ; Z               ; 23.890 ;    ;    ; 23.890 ;
+; Const[5]         ; Cout            ; 19.487 ;    ;    ; 19.487 ;
+; Const[5]         ; RAM_Data_out[5] ; 13.300 ;    ;    ; 13.300 ;
+; Const[5]         ; Z               ; 23.346 ;    ;    ; 23.346 ;
+; Const[6]         ; Cout            ; 19.190 ;    ;    ; 19.190 ;
+; Const[6]         ; RAM_Data_out[6] ; 12.967 ;    ;    ; 12.967 ;
+; Const[6]         ; Z               ; 21.222 ;    ;    ; 21.222 ;
+; Const[7]         ; Cout            ; 18.441 ;    ;    ; 18.441 ;
+; Const[7]         ; RAM_Data_out[7] ; 12.182 ;    ;    ; 12.182 ;
+; Const[7]         ; Z               ; 19.580 ;    ;    ; 19.580 ;
+; Const[8]         ; Cout            ; 18.599 ;    ;    ; 18.599 ;
+; Const[8]         ; RAM_Data_out[8] ; 13.445 ;    ;    ; 13.445 ;
+; Const[8]         ; Z               ; 19.738 ;    ;    ; 19.738 ;
+; Const[9]         ; Cout            ; 15.855 ;    ;    ; 15.855 ;
+; Const[9]         ; RAM_Data_out[9] ; 12.467 ;    ;    ; 12.467 ;
+; Const[9]         ; Z               ; 19.697 ;    ;    ; 19.697 ;
+; Control_Word[2]  ; Cout            ; 19.862 ;    ;    ; 19.862 ;
+; Control_Word[2]  ; Z               ; 23.721 ;    ;    ; 23.721 ;
+; Control_Word[3]  ; Cout            ; 21.757 ;    ;    ; 21.757 ;
+; Control_Word[3]  ; Z               ; 25.616 ;    ;    ; 25.616 ;
+; Control_Word[4]  ; Cout            ; 21.473 ;    ;    ; 21.473 ;
+; Control_Word[4]  ; Z               ; 25.332 ;    ;    ; 25.332 ;
+; Control_Word[5]  ; Z               ; 22.722 ;    ;    ; 22.722 ;
+; Control_Word[6]  ; Cout            ; 23.211 ;    ;    ; 23.211 ;
+; Control_Word[6]  ; RAM_Data_out[0] ; 15.786 ;    ;    ; 15.786 ;
+; Control_Word[6]  ; RAM_Data_out[1] ; 14.238 ;    ;    ; 14.238 ;
+; Control_Word[6]  ; RAM_Data_out[2] ; 13.253 ;    ;    ; 13.253 ;
+; Control_Word[6]  ; RAM_Data_out[3] ; 13.777 ;    ;    ; 13.777 ;
+; Control_Word[6]  ; RAM_Data_out[4] ; 13.641 ;    ;    ; 13.641 ;
+; Control_Word[6]  ; RAM_Data_out[5] ; 15.181 ;    ;    ; 15.181 ;
+; Control_Word[6]  ; RAM_Data_out[6] ; 13.461 ;    ;    ; 13.461 ;
+; Control_Word[6]  ; RAM_Data_out[7] ; 11.828 ;    ;    ; 11.828 ;
+; Control_Word[6]  ; RAM_Data_out[8] ; 14.192 ;    ;    ; 14.192 ;
+; Control_Word[6]  ; RAM_Data_out[9] ; 13.515 ;    ;    ; 13.515 ;
+; Control_Word[6]  ; Z               ; 27.070 ;    ;    ; 27.070 ;
+; Control_Word[7]  ; Cout            ; 25.377 ;    ;    ; 25.377 ;
+; Control_Word[7]  ; RAM_Data_out[0] ; 16.599 ;    ;    ; 16.599 ;
+; Control_Word[7]  ; RAM_Data_out[1] ; 17.649 ;    ;    ; 17.649 ;
+; Control_Word[7]  ; RAM_Data_out[2] ; 15.370 ;    ;    ; 15.370 ;
+; Control_Word[7]  ; RAM_Data_out[3] ; 16.368 ;    ;    ; 16.368 ;
+; Control_Word[7]  ; RAM_Data_out[4] ; 17.960 ;    ;    ; 17.960 ;
+; Control_Word[7]  ; RAM_Data_out[5] ; 17.662 ;    ;    ; 17.662 ;
+; Control_Word[7]  ; RAM_Data_out[6] ; 18.667 ;    ;    ; 18.667 ;
+; Control_Word[7]  ; RAM_Data_out[7] ; 18.813 ;    ;    ; 18.813 ;
+; Control_Word[7]  ; RAM_Data_out[8] ; 17.947 ;    ;    ; 17.947 ;
+; Control_Word[7]  ; RAM_Data_out[9] ; 17.335 ;    ;    ; 17.335 ;
+; Control_Word[7]  ; Z               ; 29.236 ;    ;    ; 29.236 ;
+; Control_Word[8]  ; Cout            ; 25.171 ;    ;    ; 25.171 ;
+; Control_Word[8]  ; RAM_Data_out[0] ; 16.733 ;    ;    ; 16.733 ;
+; Control_Word[8]  ; RAM_Data_out[1] ; 17.408 ;    ;    ; 17.408 ;
+; Control_Word[8]  ; RAM_Data_out[2] ; 16.449 ;    ;    ; 16.449 ;
+; Control_Word[8]  ; RAM_Data_out[3] ; 16.919 ;    ;    ; 16.919 ;
+; Control_Word[8]  ; RAM_Data_out[4] ; 19.224 ;    ;    ; 19.224 ;
+; Control_Word[8]  ; RAM_Data_out[5] ; 17.748 ;    ;    ; 17.748 ;
+; Control_Word[8]  ; RAM_Data_out[6] ; 18.481 ;    ;    ; 18.481 ;
+; Control_Word[8]  ; RAM_Data_out[7] ; 18.912 ;    ;    ; 18.912 ;
+; Control_Word[8]  ; RAM_Data_out[8] ; 17.893 ;    ;    ; 17.893 ;
+; Control_Word[8]  ; RAM_Data_out[9] ; 16.522 ;    ;    ; 16.522 ;
+; Control_Word[8]  ; Z               ; 28.995 ;    ;    ; 28.995 ;
+; Control_Word[9]  ; Cout            ; 22.583 ;    ;    ; 22.583 ;
+; Control_Word[9]  ; RAM_Data_out[0] ; 15.334 ;    ;    ; 15.334 ;
+; Control_Word[9]  ; RAM_Data_out[1] ; 14.855 ;    ;    ; 14.855 ;
+; Control_Word[9]  ; RAM_Data_out[2] ; 13.214 ;    ;    ; 13.214 ;
+; Control_Word[9]  ; RAM_Data_out[3] ; 13.845 ;    ;    ; 13.845 ;
+; Control_Word[9]  ; RAM_Data_out[4] ; 15.422 ;    ;    ; 15.422 ;
+; Control_Word[9]  ; RAM_Data_out[5] ; 14.488 ;    ;    ; 14.488 ;
+; Control_Word[9]  ; RAM_Data_out[6] ; 14.669 ;    ;    ; 14.669 ;
+; Control_Word[9]  ; RAM_Data_out[7] ; 14.471 ;    ;    ; 14.471 ;
+; Control_Word[9]  ; RAM_Data_out[8] ; 14.232 ;    ;    ; 14.232 ;
+; Control_Word[9]  ; RAM_Data_out[9] ; 14.027 ;    ;    ; 14.027 ;
+; Control_Word[9]  ; Z               ; 26.442 ;    ;    ; 26.442 ;
+; Control_Word[10] ; Cout            ; 25.117 ;    ;    ; 25.117 ;
+; Control_Word[10] ; RAM_Addr_out[0] ; 16.124 ;    ;    ; 16.124 ;
+; Control_Word[10] ; RAM_Addr_out[1] ; 16.986 ;    ;    ; 16.986 ;
+; Control_Word[10] ; RAM_Addr_out[2] ; 15.020 ;    ;    ; 15.020 ;
+; Control_Word[10] ; RAM_Addr_out[3] ; 16.452 ;    ;    ; 16.452 ;
+; Control_Word[10] ; RAM_Addr_out[4] ; 16.936 ;    ;    ; 16.936 ;
+; Control_Word[10] ; RAM_Addr_out[5] ; 16.690 ;    ;    ; 16.690 ;
+; Control_Word[10] ; RAM_Addr_out[6] ; 17.973 ;    ;    ; 17.973 ;
+; Control_Word[10] ; RAM_Addr_out[7] ; 17.529 ;    ;    ; 17.529 ;
+; Control_Word[10] ; RAM_Addr_out[8] ; 17.894 ;    ;    ; 17.894 ;
+; Control_Word[10] ; RAM_Addr_out[9] ; 17.292 ;    ;    ; 17.292 ;
+; Control_Word[10] ; Z               ; 28.976 ;    ;    ; 28.976 ;
+; Control_Word[11] ; Cout            ; 25.184 ;    ;    ; 25.184 ;
+; Control_Word[11] ; RAM_Addr_out[0] ; 15.449 ;    ;    ; 15.449 ;
+; Control_Word[11] ; RAM_Addr_out[1] ; 17.053 ;    ;    ; 17.053 ;
+; Control_Word[11] ; RAM_Addr_out[2] ; 15.094 ;    ;    ; 15.094 ;
+; Control_Word[11] ; RAM_Addr_out[3] ; 15.778 ;    ;    ; 15.778 ;
+; Control_Word[11] ; RAM_Addr_out[4] ; 16.751 ;    ;    ; 16.751 ;
+; Control_Word[11] ; RAM_Addr_out[5] ; 17.953 ;    ;    ; 17.953 ;
+; Control_Word[11] ; RAM_Addr_out[6] ; 18.917 ;    ;    ; 18.917 ;
+; Control_Word[11] ; RAM_Addr_out[7] ; 18.601 ;    ;    ; 18.601 ;
+; Control_Word[11] ; RAM_Addr_out[8] ; 18.806 ;    ;    ; 18.806 ;
+; Control_Word[11] ; RAM_Addr_out[9] ; 16.620 ;    ;    ; 16.620 ;
+; Control_Word[11] ; Z               ; 29.043 ;    ;    ; 29.043 ;
+; Control_Word[12] ; Cout            ; 22.233 ;    ;    ; 22.233 ;
+; Control_Word[12] ; RAM_Addr_out[0] ; 13.330 ;    ;    ; 13.330 ;
+; Control_Word[12] ; RAM_Addr_out[1] ; 13.922 ;    ;    ; 13.922 ;
+; Control_Word[12] ; RAM_Addr_out[2] ; 12.492 ;    ;    ; 12.492 ;
+; Control_Word[12] ; RAM_Addr_out[3] ; 12.883 ;    ;    ; 12.883 ;
+; Control_Word[12] ; RAM_Addr_out[4] ; 13.229 ;    ;    ; 13.229 ;
+; Control_Word[12] ; RAM_Addr_out[5] ; 14.161 ;    ;    ; 14.161 ;
+; Control_Word[12] ; RAM_Addr_out[6] ; 15.023 ;    ;    ; 15.023 ;
+; Control_Word[12] ; RAM_Addr_out[7] ; 13.804 ;    ;    ; 13.804 ;
+; Control_Word[12] ; RAM_Addr_out[8] ; 14.491 ;    ;    ; 14.491 ;
+; Control_Word[12] ; RAM_Addr_out[9] ; 13.338 ;    ;    ; 13.338 ;
+; Control_Word[12] ; Z               ; 26.092 ;    ;    ; 26.092 ;
 +------------------+-----------------+--------+----+----+--------+
 
 
@@ -715,107 +751,127 @@ No paths to report.
 +------------------+-----------------+--------+----+----+--------+
 ; Input Port       ; Output Port     ; RR     ; RF ; FR ; FF     ;
 +------------------+-----------------+--------+----+----+--------+
-; Const[0]         ; Cout            ; 19.956 ;    ;    ; 19.956 ;
-; Const[0]         ; RAM_Data_out[0] ; 11.876 ;    ;    ; 11.876 ;
-; Const[0]         ; Z               ; 17.657 ;    ;    ; 17.657 ;
-; Const[1]         ; Cout            ; 19.494 ;    ;    ; 19.494 ;
-; Const[1]         ; RAM_Data_out[1] ; 13.376 ;    ;    ; 13.376 ;
-; Const[1]         ; Z               ; 18.564 ;    ;    ; 18.564 ;
-; Const[2]         ; Cout            ; 19.167 ;    ;    ; 19.167 ;
-; Const[2]         ; RAM_Data_out[2] ; 12.663 ;    ;    ; 12.663 ;
-; Const[2]         ; Z               ; 18.470 ;    ;    ; 18.470 ;
-; Const[3]         ; Cout            ; 17.600 ;    ;    ; 17.600 ;
-; Const[3]         ; RAM_Data_out[3] ; 10.864 ;    ;    ; 10.864 ;
-; Const[3]         ; Z               ; 18.184 ;    ;    ; 18.184 ;
-; Const[4]         ; Cout            ; 19.014 ;    ;    ; 19.014 ;
-; Const[4]         ; RAM_Data_out[4] ; 11.374 ;    ;    ; 11.374 ;
-; Const[4]         ; Z               ; 18.888 ;    ;    ; 18.888 ;
-; Const[5]         ; Cout            ; 17.533 ;    ;    ; 17.533 ;
-; Const[5]         ; RAM_Data_out[5] ; 13.063 ;    ;    ; 13.063 ;
-; Const[5]         ; Z               ; 18.570 ;    ;    ; 18.570 ;
-; Const[6]         ; Cout            ; 18.402 ;    ;    ; 18.402 ;
-; Const[6]         ; RAM_Data_out[6] ; 12.932 ;    ;    ; 12.932 ;
-; Const[6]         ; Z               ; 20.013 ;    ;    ; 20.013 ;
-; Const[7]         ; Cout            ; 15.838 ;    ;    ; 15.838 ;
-; Const[7]         ; RAM_Data_out[7] ; 14.317 ;    ;    ; 14.317 ;
-; Const[7]         ; Z               ; 18.982 ;    ;    ; 18.982 ;
-; Control_Word[2]  ; Cout            ; 19.722 ;    ;    ; 19.722 ;
-; Control_Word[2]  ; Z               ; 16.844 ;    ;    ; 16.844 ;
-; Control_Word[3]  ; Cout            ; 14.759 ;    ;    ; 14.759 ;
-; Control_Word[3]  ; Z               ; 15.465 ;    ;    ; 15.465 ;
-; Control_Word[4]  ; Cout            ; 13.270 ;    ;    ; 13.270 ;
-; Control_Word[4]  ; Z               ; 15.801 ;    ;    ; 15.801 ;
-; Control_Word[5]  ; Z               ; 14.999 ;    ;    ; 14.999 ;
-; Control_Word[6]  ; Cout            ; 14.299 ;    ;    ; 14.299 ;
-; Control_Word[6]  ; RAM_Data_out[0] ; 10.880 ;    ;    ; 10.880 ;
-; Control_Word[6]  ; RAM_Data_out[1] ; 12.698 ;    ;    ; 12.698 ;
-; Control_Word[6]  ; RAM_Data_out[2] ; 11.794 ;    ;    ; 11.794 ;
-; Control_Word[6]  ; RAM_Data_out[3] ; 10.460 ;    ;    ; 10.460 ;
-; Control_Word[6]  ; RAM_Data_out[4] ; 10.979 ;    ;    ; 10.979 ;
-; Control_Word[6]  ; RAM_Data_out[5] ; 12.349 ;    ;    ; 12.349 ;
-; Control_Word[6]  ; RAM_Data_out[6] ; 10.938 ;    ;    ; 10.938 ;
-; Control_Word[6]  ; RAM_Data_out[7] ; 12.778 ;    ;    ; 12.778 ;
-; Control_Word[6]  ; Z               ; 16.661 ;    ;    ; 16.661 ;
-; Control_Word[7]  ; Cout            ; 17.520 ;    ;    ; 17.520 ;
-; Control_Word[7]  ; RAM_Data_out[0] ; 15.484 ;    ;    ; 15.484 ;
-; Control_Word[7]  ; RAM_Data_out[1] ; 16.912 ;    ;    ; 16.912 ;
-; Control_Word[7]  ; RAM_Data_out[2] ; 16.113 ;    ;    ; 16.113 ;
-; Control_Word[7]  ; RAM_Data_out[3] ; 14.378 ;    ;    ; 14.378 ;
-; Control_Word[7]  ; RAM_Data_out[4] ; 13.651 ;    ;    ; 13.651 ;
-; Control_Word[7]  ; RAM_Data_out[5] ; 15.655 ;    ;    ; 15.655 ;
-; Control_Word[7]  ; RAM_Data_out[6] ; 14.885 ;    ;    ; 14.885 ;
-; Control_Word[7]  ; RAM_Data_out[7] ; 15.999 ;    ;    ; 15.999 ;
-; Control_Word[7]  ; Z               ; 19.361 ;    ;    ; 19.361 ;
-; Control_Word[8]  ; Cout            ; 15.621 ;    ;    ; 15.621 ;
-; Control_Word[8]  ; RAM_Data_out[0] ; 15.257 ;    ;    ; 15.257 ;
-; Control_Word[8]  ; RAM_Data_out[1] ; 15.076 ;    ;    ; 15.076 ;
-; Control_Word[8]  ; RAM_Data_out[2] ; 14.790 ;    ;    ; 14.790 ;
-; Control_Word[8]  ; RAM_Data_out[3] ; 12.948 ;    ;    ; 12.948 ;
-; Control_Word[8]  ; RAM_Data_out[4] ; 12.330 ;    ;    ; 12.330 ;
-; Control_Word[8]  ; RAM_Data_out[5] ; 14.121 ;    ;    ; 14.121 ;
-; Control_Word[8]  ; RAM_Data_out[6] ; 13.945 ;    ;    ; 13.945 ;
-; Control_Word[8]  ; RAM_Data_out[7] ; 14.100 ;    ;    ; 14.100 ;
-; Control_Word[8]  ; Z               ; 18.765 ;    ;    ; 18.765 ;
-; Control_Word[9]  ; Cout            ; 15.168 ;    ;    ; 15.168 ;
-; Control_Word[9]  ; RAM_Data_out[0] ; 13.431 ;    ;    ; 13.431 ;
-; Control_Word[9]  ; RAM_Data_out[1] ; 13.631 ;    ;    ; 13.631 ;
-; Control_Word[9]  ; RAM_Data_out[2] ; 12.868 ;    ;    ; 12.868 ;
-; Control_Word[9]  ; RAM_Data_out[3] ; 12.044 ;    ;    ; 12.044 ;
-; Control_Word[9]  ; RAM_Data_out[4] ; 11.716 ;    ;    ; 11.716 ;
-; Control_Word[9]  ; RAM_Data_out[5] ; 13.082 ;    ;    ; 13.082 ;
-; Control_Word[9]  ; RAM_Data_out[6] ; 12.260 ;    ;    ; 12.260 ;
-; Control_Word[9]  ; RAM_Data_out[7] ; 13.647 ;    ;    ; 13.647 ;
-; Control_Word[9]  ; Z               ; 17.308 ;    ;    ; 17.308 ;
-; Control_Word[10] ; Cout            ; 16.072 ;    ;    ; 16.072 ;
-; Control_Word[10] ; RAM_Addr_out[0] ; 15.033 ;    ;    ; 15.033 ;
-; Control_Word[10] ; RAM_Addr_out[1] ; 13.696 ;    ;    ; 13.696 ;
-; Control_Word[10] ; RAM_Addr_out[2] ; 14.010 ;    ;    ; 14.010 ;
-; Control_Word[10] ; RAM_Addr_out[3] ; 13.374 ;    ;    ; 13.374 ;
-; Control_Word[10] ; RAM_Addr_out[4] ; 12.994 ;    ;    ; 12.994 ;
-; Control_Word[10] ; RAM_Addr_out[5] ; 12.665 ;    ;    ; 12.665 ;
-; Control_Word[10] ; RAM_Addr_out[6] ; 13.055 ;    ;    ; 13.055 ;
-; Control_Word[10] ; RAM_Addr_out[7] ; 14.619 ;    ;    ; 14.619 ;
-; Control_Word[10] ; Z               ; 17.895 ;    ;    ; 17.895 ;
-; Control_Word[11] ; Cout            ; 17.777 ;    ;    ; 17.777 ;
-; Control_Word[11] ; RAM_Addr_out[0] ; 16.110 ;    ;    ; 16.110 ;
-; Control_Word[11] ; RAM_Addr_out[1] ; 13.739 ;    ;    ; 13.739 ;
-; Control_Word[11] ; RAM_Addr_out[2] ; 15.885 ;    ;    ; 15.885 ;
-; Control_Word[11] ; RAM_Addr_out[3] ; 15.281 ;    ;    ; 15.281 ;
-; Control_Word[11] ; RAM_Addr_out[4] ; 13.725 ;    ;    ; 13.725 ;
-; Control_Word[11] ; RAM_Addr_out[5] ; 13.089 ;    ;    ; 13.089 ;
-; Control_Word[11] ; RAM_Addr_out[6] ; 14.663 ;    ;    ; 14.663 ;
-; Control_Word[11] ; RAM_Addr_out[7] ; 16.324 ;    ;    ; 16.324 ;
-; Control_Word[11] ; Z               ; 18.912 ;    ;    ; 18.912 ;
-; Control_Word[12] ; Cout            ; 15.227 ;    ;    ; 15.227 ;
-; Control_Word[12] ; RAM_Addr_out[0] ; 14.278 ;    ;    ; 14.278 ;
-; Control_Word[12] ; RAM_Addr_out[1] ; 12.328 ;    ;    ; 12.328 ;
-; Control_Word[12] ; RAM_Addr_out[2] ; 13.857 ;    ;    ; 13.857 ;
-; Control_Word[12] ; RAM_Addr_out[3] ; 13.226 ;    ;    ; 13.226 ;
-; Control_Word[12] ; RAM_Addr_out[4] ; 12.616 ;    ;    ; 12.616 ;
-; Control_Word[12] ; RAM_Addr_out[5] ; 11.854 ;    ;    ; 11.854 ;
-; Control_Word[12] ; RAM_Addr_out[6] ; 11.721 ;    ;    ; 11.721 ;
-; Control_Word[12] ; RAM_Addr_out[7] ; 13.774 ;    ;    ; 13.774 ;
-; Control_Word[12] ; Z               ; 16.717 ;    ;    ; 16.717 ;
+; Const[0]         ; Cout            ; 21.974 ;    ;    ; 21.974 ;
+; Const[0]         ; RAM_Data_out[0] ; 12.609 ;    ;    ; 12.609 ;
+; Const[0]         ; Z               ; 22.468 ;    ;    ; 22.468 ;
+; Const[1]         ; Cout            ; 21.292 ;    ;    ; 21.292 ;
+; Const[1]         ; RAM_Data_out[1] ; 13.564 ;    ;    ; 13.564 ;
+; Const[1]         ; Z               ; 21.624 ;    ;    ; 21.624 ;
+; Const[2]         ; Cout            ; 22.257 ;    ;    ; 22.257 ;
+; Const[2]         ; RAM_Data_out[2] ; 13.639 ;    ;    ; 13.639 ;
+; Const[2]         ; Z               ; 22.751 ;    ;    ; 22.751 ;
+; Const[3]         ; Cout            ; 20.378 ;    ;    ; 20.378 ;
+; Const[3]         ; RAM_Data_out[3] ; 14.350 ;    ;    ; 14.350 ;
+; Const[3]         ; Z               ; 20.872 ;    ;    ; 20.872 ;
+; Const[4]         ; Cout            ; 20.031 ;    ;    ; 20.031 ;
+; Const[4]         ; RAM_Data_out[4] ; 14.266 ;    ;    ; 14.266 ;
+; Const[4]         ; Z               ; 20.525 ;    ;    ; 20.525 ;
+; Const[5]         ; Cout            ; 19.487 ;    ;    ; 19.487 ;
+; Const[5]         ; RAM_Data_out[5] ; 13.300 ;    ;    ; 13.300 ;
+; Const[5]         ; Z               ; 19.532 ;    ;    ; 19.532 ;
+; Const[6]         ; Cout            ; 19.190 ;    ;    ; 19.190 ;
+; Const[6]         ; RAM_Data_out[6] ; 12.967 ;    ;    ; 12.967 ;
+; Const[6]         ; Z               ; 19.684 ;    ;    ; 19.684 ;
+; Const[7]         ; Cout            ; 18.441 ;    ;    ; 18.441 ;
+; Const[7]         ; RAM_Data_out[7] ; 12.182 ;    ;    ; 12.182 ;
+; Const[7]         ; Z               ; 17.248 ;    ;    ; 17.248 ;
+; Const[8]         ; Cout            ; 18.599 ;    ;    ; 18.599 ;
+; Const[8]         ; RAM_Data_out[8] ; 13.445 ;    ;    ; 13.445 ;
+; Const[8]         ; Z               ; 18.223 ;    ;    ; 18.223 ;
+; Const[9]         ; Cout            ; 15.855 ;    ;    ; 15.855 ;
+; Const[9]         ; RAM_Data_out[9] ; 12.467 ;    ;    ; 12.467 ;
+; Const[9]         ; Z               ; 19.517 ;    ;    ; 19.517 ;
+; Control_Word[2]  ; Cout            ; 19.862 ;    ;    ; 19.862 ;
+; Control_Word[2]  ; Z               ; 20.356 ;    ;    ; 20.356 ;
+; Control_Word[3]  ; Cout            ; 14.683 ;    ;    ; 14.683 ;
+; Control_Word[3]  ; Z               ; 16.723 ;    ;    ; 16.723 ;
+; Control_Word[4]  ; Cout            ; 14.540 ;    ;    ; 14.540 ;
+; Control_Word[4]  ; Z               ; 17.502 ;    ;    ; 17.502 ;
+; Control_Word[5]  ; Z               ; 17.488 ;    ;    ; 17.488 ;
+; Control_Word[6]  ; Cout            ; 16.903 ;    ;    ; 16.903 ;
+; Control_Word[6]  ; RAM_Data_out[0] ; 13.573 ;    ;    ; 13.573 ;
+; Control_Word[6]  ; RAM_Data_out[1] ; 14.121 ;    ;    ; 14.121 ;
+; Control_Word[6]  ; RAM_Data_out[2] ; 12.958 ;    ;    ; 12.958 ;
+; Control_Word[6]  ; RAM_Data_out[3] ; 13.777 ;    ;    ; 13.777 ;
+; Control_Word[6]  ; RAM_Data_out[4] ; 13.641 ;    ;    ; 13.641 ;
+; Control_Word[6]  ; RAM_Data_out[5] ; 15.181 ;    ;    ; 15.181 ;
+; Control_Word[6]  ; RAM_Data_out[6] ; 13.461 ;    ;    ; 13.461 ;
+; Control_Word[6]  ; RAM_Data_out[7] ; 11.828 ;    ;    ; 11.828 ;
+; Control_Word[6]  ; RAM_Data_out[8] ; 14.192 ;    ;    ; 14.192 ;
+; Control_Word[6]  ; RAM_Data_out[9] ; 13.515 ;    ;    ; 13.515 ;
+; Control_Word[6]  ; Z               ; 16.894 ;    ;    ; 16.894 ;
+; Control_Word[7]  ; Cout            ; 18.197 ;    ;    ; 18.197 ;
+; Control_Word[7]  ; RAM_Data_out[0] ; 16.061 ;    ;    ; 16.061 ;
+; Control_Word[7]  ; RAM_Data_out[1] ; 15.430 ;    ;    ; 15.430 ;
+; Control_Word[7]  ; RAM_Data_out[2] ; 14.780 ;    ;    ; 14.780 ;
+; Control_Word[7]  ; RAM_Data_out[3] ; 15.658 ;    ;    ; 15.658 ;
+; Control_Word[7]  ; RAM_Data_out[4] ; 17.169 ;    ;    ; 17.169 ;
+; Control_Word[7]  ; RAM_Data_out[5] ; 16.892 ;    ;    ; 16.892 ;
+; Control_Word[7]  ; RAM_Data_out[6] ; 16.992 ;    ;    ; 16.992 ;
+; Control_Word[7]  ; RAM_Data_out[7] ; 15.246 ;    ;    ; 15.246 ;
+; Control_Word[7]  ; RAM_Data_out[8] ; 16.876 ;    ;    ; 16.876 ;
+; Control_Word[7]  ; RAM_Data_out[9] ; 14.809 ;    ;    ; 14.809 ;
+; Control_Word[7]  ; Z               ; 20.312 ;    ;    ; 20.312 ;
+; Control_Word[8]  ; Cout            ; 19.018 ;    ;    ; 19.018 ;
+; Control_Word[8]  ; RAM_Data_out[0] ; 16.528 ;    ;    ; 16.528 ;
+; Control_Word[8]  ; RAM_Data_out[1] ; 15.256 ;    ;    ; 15.256 ;
+; Control_Word[8]  ; RAM_Data_out[2] ; 14.754 ;    ;    ; 14.754 ;
+; Control_Word[8]  ; RAM_Data_out[3] ; 15.941 ;    ;    ; 15.941 ;
+; Control_Word[8]  ; RAM_Data_out[4] ; 17.225 ;    ;    ; 17.225 ;
+; Control_Word[8]  ; RAM_Data_out[5] ; 15.700 ;    ;    ; 15.700 ;
+; Control_Word[8]  ; RAM_Data_out[6] ; 15.967 ;    ;    ; 15.967 ;
+; Control_Word[8]  ; RAM_Data_out[7] ; 16.096 ;    ;    ; 16.096 ;
+; Control_Word[8]  ; RAM_Data_out[8] ; 16.757 ;    ;    ; 16.757 ;
+; Control_Word[8]  ; RAM_Data_out[9] ; 15.630 ;    ;    ; 15.630 ;
+; Control_Word[8]  ; Z               ; 21.162 ;    ;    ; 21.162 ;
+; Control_Word[9]  ; Cout            ; 17.415 ;    ;    ; 17.415 ;
+; Control_Word[9]  ; RAM_Data_out[0] ; 15.334 ;    ;    ; 15.334 ;
+; Control_Word[9]  ; RAM_Data_out[1] ; 14.855 ;    ;    ; 14.855 ;
+; Control_Word[9]  ; RAM_Data_out[2] ; 13.214 ;    ;    ; 13.214 ;
+; Control_Word[9]  ; RAM_Data_out[3] ; 13.845 ;    ;    ; 13.845 ;
+; Control_Word[9]  ; RAM_Data_out[4] ; 15.422 ;    ;    ; 15.422 ;
+; Control_Word[9]  ; RAM_Data_out[5] ; 14.488 ;    ;    ; 14.488 ;
+; Control_Word[9]  ; RAM_Data_out[6] ; 14.669 ;    ;    ; 14.669 ;
+; Control_Word[9]  ; RAM_Data_out[7] ; 14.471 ;    ;    ; 14.471 ;
+; Control_Word[9]  ; RAM_Data_out[8] ; 14.232 ;    ;    ; 14.232 ;
+; Control_Word[9]  ; RAM_Data_out[9] ; 14.027 ;    ;    ; 14.027 ;
+; Control_Word[9]  ; Z               ; 19.010 ;    ;    ; 19.010 ;
+; Control_Word[10] ; Cout            ; 16.991 ;    ;    ; 16.991 ;
+; Control_Word[10] ; RAM_Addr_out[0] ; 14.958 ;    ;    ; 14.958 ;
+; Control_Word[10] ; RAM_Addr_out[1] ; 16.003 ;    ;    ; 16.003 ;
+; Control_Word[10] ; RAM_Addr_out[2] ; 14.682 ;    ;    ; 14.682 ;
+; Control_Word[10] ; RAM_Addr_out[3] ; 15.129 ;    ;    ; 15.129 ;
+; Control_Word[10] ; RAM_Addr_out[4] ; 15.784 ;    ;    ; 15.784 ;
+; Control_Word[10] ; RAM_Addr_out[5] ; 13.242 ;    ;    ; 13.242 ;
+; Control_Word[10] ; RAM_Addr_out[6] ; 14.541 ;    ;    ; 14.541 ;
+; Control_Word[10] ; RAM_Addr_out[7] ; 12.931 ;    ;    ; 12.931 ;
+; Control_Word[10] ; RAM_Addr_out[8] ; 16.158 ;    ;    ; 16.158 ;
+; Control_Word[10] ; RAM_Addr_out[9] ; 14.565 ;    ;    ; 14.565 ;
+; Control_Word[10] ; Z               ; 18.569 ;    ;    ; 18.569 ;
+; Control_Word[11] ; Cout            ; 17.436 ;    ;    ; 17.436 ;
+; Control_Word[11] ; RAM_Addr_out[0] ; 14.140 ;    ;    ; 14.140 ;
+; Control_Word[11] ; RAM_Addr_out[1] ; 14.569 ;    ;    ; 14.569 ;
+; Control_Word[11] ; RAM_Addr_out[2] ; 13.014 ;    ;    ; 13.014 ;
+; Control_Word[11] ; RAM_Addr_out[3] ; 15.300 ;    ;    ; 15.300 ;
+; Control_Word[11] ; RAM_Addr_out[4] ; 15.063 ;    ;    ; 15.063 ;
+; Control_Word[11] ; RAM_Addr_out[5] ; 15.800 ;    ;    ; 15.800 ;
+; Control_Word[11] ; RAM_Addr_out[6] ; 16.451 ;    ;    ; 16.451 ;
+; Control_Word[11] ; RAM_Addr_out[7] ; 15.464 ;    ;    ; 15.464 ;
+; Control_Word[11] ; RAM_Addr_out[8] ; 16.534 ;    ;    ; 16.534 ;
+; Control_Word[11] ; RAM_Addr_out[9] ; 15.010 ;    ;    ; 15.010 ;
+; Control_Word[11] ; Z               ; 20.893 ;    ;    ; 20.893 ;
+; Control_Word[12] ; Cout            ; 15.764 ;    ;    ; 15.764 ;
+; Control_Word[12] ; RAM_Addr_out[0] ; 13.330 ;    ;    ; 13.330 ;
+; Control_Word[12] ; RAM_Addr_out[1] ; 13.922 ;    ;    ; 13.922 ;
+; Control_Word[12] ; RAM_Addr_out[2] ; 12.492 ;    ;    ; 12.492 ;
+; Control_Word[12] ; RAM_Addr_out[3] ; 12.883 ;    ;    ; 12.883 ;
+; Control_Word[12] ; RAM_Addr_out[4] ; 13.229 ;    ;    ; 13.229 ;
+; Control_Word[12] ; RAM_Addr_out[5] ; 14.161 ;    ;    ; 14.161 ;
+; Control_Word[12] ; RAM_Addr_out[6] ; 15.023 ;    ;    ; 15.023 ;
+; Control_Word[12] ; RAM_Addr_out[7] ; 13.804 ;    ;    ; 13.804 ;
+; Control_Word[12] ; RAM_Addr_out[8] ; 14.491 ;    ;    ; 14.491 ;
+; Control_Word[12] ; RAM_Addr_out[9] ; 13.338 ;    ;    ; 13.338 ;
+; Control_Word[12] ; Z               ; 18.850 ;    ;    ; 18.850 ;
 +------------------+-----------------+--------+----+----+--------+
 
 
@@ -824,7 +880,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Clock      ; Clock    ; 6080     ; 0        ; 0        ; 0        ;
+; Clock      ; Clock    ; 8896     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -834,7 +890,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Clock      ; Clock    ; 6080     ; 0        ; 0        ; 0        ;
+; Clock      ; Clock    ; 8896     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -858,10 +914,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 33    ; 33   ;
-; Unconstrained Input Port Paths  ; 1541  ; 1541 ;
-; Unconstrained Output Ports      ; 18    ; 18   ;
-; Unconstrained Output Port Paths ; 357   ; 357  ;
+; Unconstrained Input Ports       ; 37    ; 37   ;
+; Unconstrained Input Port Paths  ; 2001  ; 2001 ;
+; Unconstrained Output Ports      ; 22    ; 22   ;
+; Unconstrained Output Port Paths ; 441   ; 441  ;
 +---------------------------------+-------+------+
 
 
@@ -871,7 +927,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 28 17:46:52 2014
+    Info: Processing started: Wed Feb 12 17:43:17 2014
 Info: Command: quartus_sta DataPath -c DataPath
 Info: qsta_default_script.tcl version: #1
 Warning: Parallel compilation is not licensed and has been disabled
@@ -880,27 +936,27 @@ Info: No user constrained base clocks found in the design. Calling "derive_clock
 Info: Deriving Clocks
     Info: create_clock -period 1.000 -name Clock Clock
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -10.349
+Info: Worst-case setup slack is -13.751
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:   -10.349      -577.068 Clock 
-Info: Worst-case hold slack is 3.463
+    Info:   -13.751      -904.130 Clock 
+Info: Worst-case hold slack is 3.578
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     3.463         0.000 Clock 
+    Info:     3.578         0.000 Clock 
 Info: No Recovery paths to report
 Info: No Removal paths to report
 Info: Worst-case minimum pulse width slack is -1.583
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -1.583      -170.287 Clock 
+    Info:    -1.583      -212.463 Clock 
 Info: The selected device family is not supported by the report_metastability command.
 Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 218 megabytes
-    Info: Processing ended: Tue Jan 28 17:46:55 2014
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Wed Feb 12 17:43:19 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
 
 

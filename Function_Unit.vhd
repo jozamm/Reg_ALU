@@ -25,8 +25,8 @@ Architecture RTL of Function_Unit is
 	
 begin
 	
-	ALU_Inst : entity work.ALU port map(FS,A,B,G,Cout);
-	Shift_Inst : entity work.Shifter port map(FS(1 downto 0),B,H);
+	ALU_Inst : entity work.ALU generic map (Width => Width) port map(FS,A,B,G,Cout);
+	Shift_Inst : entity work.Shifter generic map (Width => Width) port map(FS(1 downto 0),B,H);
 	
 	With MF_Sel select
 		F <= 	G when '0',

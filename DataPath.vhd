@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 --The register file and ALU are implemented as seperate entities
 
 Entity DataPath is
-	generic ( Width : integer := 8 );
+	generic ( Width : integer := 10 );
 	port (
 			 Reset : in std_logic;
 			 Clock : in std_logic;
@@ -39,9 +39,9 @@ Architecture RTL of DataPath is
 	
 begin
 	
-	Registers : entity work.RegisterFile port map(Reset,Clock,A_addr,B_addr,Dest,LE,D_Bus,A_Data,B_Data);
+	Registers : entity work.RegisterFile generic map (Width => Width) port map(Reset,Clock,A_addr,B_addr,Dest,LE,D_Bus,A_Data,B_Data);
 	
-	Functions : entity work.Function_Unit port map (FS,A_Data,B_Bus,FS(3),Func_out,Cout,Z); --To arrange FS
+	Functions : entity work.Function_Unit generic map (Width => Width) port map (FS,A_Data,B_Bus,FS(3),Func_out,Cout,Z); --To arrange FS
 	
 	B_Bus <= B_Data when MB = '0' else Const;
 	D_Bus <= RAM_Data_in when MD = '1' else Func_out;

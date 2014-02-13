@@ -15,8 +15,8 @@ begin
 
 	with Sel Select
 		H <= 	B when "00",
-				'0' & B(7 downto 1) when "01",
-				B(6 downto 0) & '0' when "10",
+				'0' & B(B'high downto 1) when "01",
+				B(B'high-1 downto 0) & '0' when "10",
 				(Others => 'X') when "11",
 				(Others => '0') when others;
 				
