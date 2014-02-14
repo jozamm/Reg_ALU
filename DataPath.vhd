@@ -1,11 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.math_real.all;
+use work.Misc_functions.all;
 
 --This entity implements the datapath as defined in the chapter Instruction Set Architecture
 --The register file and ALU are implemented as seperate entities
 
 Entity DataPath is
-	generic ( Width : integer := 10 );
+	generic ( Width : integer := 64);
 	port (
 			 Reset : in std_logic;
 			 Clock : in std_logic;
@@ -13,7 +15,7 @@ Entity DataPath is
 			 Const : in std_logic_vector(Width - 1 downto 0);
 			 RAM_Data_in : in std_logic_vector(Width -1  downto 0);
 			 RAM_Data_out : out std_logic_vector(Width - 1 downto 0);
-			 RAM_Addr_out : out std_logic_vector(Width - 1 downto 0);
+			 RAM_Addr_out : out std_logic_vector(log2Val(Width) - 1 downto 0);
 			 Cout : out std_logic;
 			 Z  :out std_logic
 			);
@@ -36,16 +38,17 @@ Architecture RTL of DataPath is
 	Signal D_Bus : std_logic_vector(Width - 1 downto 0);
 	Signal Func_out : std_logic_vector(Width - 1 downto 0);
 	
+	constant Addr_Width : integer := log2Val(Width);
 	
 begin
 	
-	Registers : entity work.RegisterFile generic map (Width => Width) port map(Reset,Clock,A_addr,B_addr,Dest,LE,D_Bus,A_Data,B_Data);
+	Registers : entity work.RegisterFile generic map (Width => Width, Regs => Addr_Width-1) port map(Reset,Clock,A_addr,B_addr,Dest,LE,D_Bus,A_Data,B_Data);
 	
 	Functions : entity work.Function_Unit generic map (Width => Width) port map (FS,A_Data,B_Bus,FS(3),Func_out,Cout,Z); --To arrange FS
 	
 	B_Bus <= B_Data when MB = '0' else Const;
 	D_Bus <= RAM_Data_in when MD = '1' else Func_out;
 	RAM_Data_out <= B_Bus;
-	RAM_Addr_out <= A_Data;
+	RAM_Addr_out <= A_Data(Addr_Width-1 downto 0);
 
 End Architecture;

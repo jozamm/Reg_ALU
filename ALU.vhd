@@ -41,7 +41,7 @@ Architecture RTL of ALU is
 	
 
 begin
-
+ 
 	Logic_Generate :	for L in 0 to (Width - 1)  generate
 								LS : Logic_Slice port map(Sel(2 downto 1),A(L),B(L),Logic_out(L));
 							end generate Logic_Generate;

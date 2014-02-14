@@ -60,107 +60,331 @@
  ---------------------------------------------------------------------------------
 
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-CHIP  "DataPath"  ASSIGNED TO AN: EP1C3T100C8
+CHIP  "DataPath"  ASSIGNED TO AN: EP1C4F324C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-RAM_Addr_out[6]              : 1         : output : 3.3-V LVTTL       :         : 1         : N              
-Control_Word[8]              : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
-RAM_Data_out[0]              : 3         : output : 3.3-V LVTTL       :         : 1         : N              
-RAM_Addr_out[3]              : 4         : output : 3.3-V LVTTL       :         : 1         : N              
-Control_Word[9]              : 5         : input  : 3.3-V LVTTL       :         : 1         : N              
-~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 3.3-V LVTTL       :         : 1         : N              
-DATA0                        : 7         : input  :                   :         : 1         :                
-nCONFIG                      : 8         :        :                   :         : 1         :                
-VCCA_PLL1                    : 9         : power  :                   : 1.5V    :           :                
-Clock                        : 10        : input  : 3.3-V LVTTL       :         : 1         : N              
-GNDA_PLL1                    : 11        : gnd    :                   :         :           :                
-nCEO                         : 12        :        :                   :         : 1         :                
-nCE                          : 13        :        :                   :         : 1         :                
-MSEL0                        : 14        :        :                   :         : 1         :                
-MSEL1                        : 15        :        :                   :         : 1         :                
-DCLK                         : 16        : bidir  :                   :         : 1         :                
-~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 17        : input  : 3.3-V LVTTL       :         : 1         : N              
-VCCIO1                       : 18        : power  :                   : 3.3V    : 1         :                
-GND                          : 19        : gnd    :                   :         :           :                
-RAM_Addr_out[0]              : 20        : output : 3.3-V LVTTL       :         : 1         : N              
-Control_Word[7]              : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
-RAM_Data_out[4]              : 22        : output : 3.3-V LVTTL       :         : 1         : N              
-Control_Word[11]             : 23        : input  : 3.3-V LVTTL       :         : 1         : N              
-RAM_Addr_out[8]              : 24        : output : 3.3-V LVTTL       :         : 1         : N              
-Z                            : 25        : output : 3.3-V LVTTL       :         : 1         : N              
-RAM_Data_in[6]               : 26        : input  : 3.3-V LVTTL       :         : 4         : N              
-RAM_Data_in[1]               : 27        : input  : 3.3-V LVTTL       :         : 4         : N              
-Control_Word[12]             : 28        : input  : 3.3-V LVTTL       :         : 4         : N              
-Const[9]                     : 29        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND                          : 30        : gnd    :                   :         :           :                
-VCCIO4                       : 31        : power  :                   : 3.3V    : 4         :                
-GND                          : 32        : gnd    :                   :         :           :                
-VCCINT                       : 33        : power  :                   : 1.5V    :           :                
-Control_Word[2]              : 34        : input  : 3.3-V LVTTL       :         : 4         : N              
-RAM_Data_in[4]               : 35        : input  : 3.3-V LVTTL       :         : 4         : N              
-RAM_Data_in[0]               : 36        : input  : 3.3-V LVTTL       :         : 4         : N              
-RAM_Data_in[5]               : 37        : input  : 3.3-V LVTTL       :         : 4         : N              
-RAM_Data_out[6]              : 38        : output : 3.3-V LVTTL       :         : 4         : N              
-Control_Word[4]              : 39        : input  : 3.3-V LVTTL       :         : 4         : N              
-Const[1]                     : 40        : input  : 3.3-V LVTTL       :         : 4         : N              
-Const[3]                     : 41        : input  : 3.3-V LVTTL       :         : 4         : N              
-RAM_Data_in[2]               : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND                          : 43        : gnd    :                   :         :           :                
-VCCINT                       : 44        : power  :                   : 1.5V    :           :                
-GND                          : 45        : gnd    :                   :         :           :                
-VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-RAM_Data_out[7]              : 47        : output : 3.3-V LVTTL       :         : 4         : N              
-Control_Word[13]             : 48        : input  : 3.3-V LVTTL       :         : 4         : N              
-Control_Word[1]              : 49        : input  : 3.3-V LVTTL       :         : 4         : N              
-Control_Word[5]              : 50        : input  : 3.3-V LVTTL       :         : 4         : N              
-Const[2]                     : 51        : input  : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 52        :        :                   :         : 3         :                
-Control_Word[14]             : 53        : input  : 3.3-V LVTTL       :         : 3         : N              
-Const[4]                     : 54        : input  : 3.3-V LVTTL       :         : 3         : N              
-RAM_Addr_out[1]              : 55        : output : 3.3-V LVTTL       :         : 3         : N              
-RAM_Data_out[8]              : 56        : output : 3.3-V LVTTL       :         : 3         : N              
-RAM_Data_out[3]              : 57        : output : 3.3-V LVTTL       :         : 3         : N              
-GND                          : 58        : gnd    :                   :         :           :                
-VCCIO3                       : 59        : power  :                   : 3.3V    : 3         :                
-CONF_DONE                    : 60        :        :                   :         : 3         :                
-nSTATUS                      : 61        :        :                   :         : 3         :                
-TCK                          : 62        : input  :                   :         : 3         :                
-TMS                          : 63        : input  :                   :         : 3         :                
-TDO                          : 64        : output :                   :         : 3         :                
-RAM_Addr_out[5]              : 65        : output : 3.3-V LVTTL       :         : 3         : N              
-Reset                        : 66        : input  : 3.3-V LVTTL       :         : 3         : N              
-TDI                          : 67        : input  :                   :         : 3         :                
-Control_Word[15]             : 68        : input  : 3.3-V LVTTL       :         : 3         : N              
-RAM_Addr_out[7]              : 69        : output : 3.3-V LVTTL       :         : 3         : N              
-RAM_Data_in[7]               : 70        : input  : 3.3-V LVTTL       :         : 3         : N              
-RAM_Data_out[5]              : 71        : output : 3.3-V LVTTL       :         : 3         : N              
-Const[8]                     : 72        : input  : 3.3-V LVTTL       :         : 3         : N              
-Const[7]                     : 73        : input  : 3.3-V LVTTL       :         : 3         : N              
-RAM_Data_in[8]               : 74        : input  : 3.3-V LVTTL       :         : 3         : N              
-RAM_Data_in[3]               : 75        : input  : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 76        :        :                   :         : 2         :                
-Cout                         : 77        : output : 3.3-V LVTTL       :         : 2         : N              
-Control_Word[10]             : 78        : input  : 3.3-V LVTTL       :         : 2         : N              
-Const[6]                     : 79        : input  : 3.3-V LVTTL       :         : 2         : N              
-VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
-GND                          : 81        : gnd    :                   :         :           :                
-VCCINT                       : 82        : power  :                   : 1.5V    :           :                
-GND                          : 83        : gnd    :                   :         :           :                
-Control_Word[0]              : 84        : input  : 3.3-V LVTTL       :         : 2         : N              
-Control_Word[6]              : 85        : input  : 3.3-V LVTTL       :         : 2         : N              
-RAM_Addr_out[9]              : 86        : output : 3.3-V LVTTL       :         : 2         : N              
-RAM_Addr_out[4]              : 87        : output : 3.3-V LVTTL       :         : 2         : N              
-Control_Word[3]              : 88        : input  : 3.3-V LVTTL       :         : 2         : N              
-RAM_Data_in[9]               : 89        : input  : 3.3-V LVTTL       :         : 2         : N              
-Const[0]                     : 90        : input  : 3.3-V LVTTL       :         : 2         : N              
-Const[5]                     : 91        : input  : 3.3-V LVTTL       :         : 2         : N              
-RAM_Addr_out[2]              : 92        : output : 3.3-V LVTTL       :         : 2         : N              
-VCCINT                       : 93        : power  :                   : 1.5V    :           :                
-GND                          : 94        : gnd    :                   :         :           :                
-VCCIO2                       : 95        : power  :                   : 3.3V    : 2         :                
-GND                          : 96        : gnd    :                   :         :           :                
-GND*                         : 97        :        :                   :         : 2         :                
-RAM_Data_out[9]              : 98        : output : 3.3-V LVTTL       :         : 2         : N              
-RAM_Data_out[1]              : 99        : output : 3.3-V LVTTL       :         : 2         : N              
-RAM_Data_out[2]              : 100       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : A1        : gnd    :                   :         :           :                
+VCCINT                       : A2        : power  :                   : 1.5V    :           :                
+GND                          : A3        : gnd    :                   :         :           :                
+RAM_Data_in[8]               : A4        : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : A5        : power  :                   : 3.3V    : 2         :                
+RAM_Data_in[11]              : A6        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[37]             : A7        : output : 3.3-V LVTTL       :         : 2         : N              
+Const[3]                     : A8        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[51]             : A9        : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[32]              : A10       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[43]              : A11       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[0]              : A12       : output : 3.3-V LVTTL       :         : 2         : N              
+Const[62]                    : A13       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : A14       : power  :                   : 3.3V    : 2         :                
+Const[45]                    : A15       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : A16       : gnd    :                   :         :           :                
+VCCINT                       : A17       : power  :                   : 1.5V    :           :                
+GND                          : A18       : gnd    :                   :         :           :                
+VCCINT                       : B1        : power  :                   : 1.5V    :           :                
+GND                          : B2        : gnd    :                   :         :           :                
+GND*                         : B3        :        :                   :         : 2         :                
+RAM_Data_in[53]              : B4        : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[30]                    : B5        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[9]               : B6        : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[48]                    : B7        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[40]             : B8        : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[54]             : B9        : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[61]             : B10       : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[11]             : B11       : output : 3.3-V LVTTL       :         : 2         : N              
+Const[35]                    : B12       : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[50]                    : B13       : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[43]                    : B14       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B15       :        :                   :         : 2         :                
+RAM_Data_in[31]              : B16       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : B17       : gnd    :                   :         :           :                
+VCCINT                       : B18       : power  :                   : 1.5V    :           :                
+GND                          : C1        : gnd    :                   :         :           :                
+Const[22]                    : C2        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[44]                    : C3        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : C4        :        :                   :         : 2         :                
+GND*                         : C5        :        :                   :         : 2         :                
+RAM_Data_in[38]              : C6        : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[28]                    : C7        : input  : 3.3-V LVTTL       :         : 2         : N              
+Control_Word[7]              : C8        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[21]             : C9        : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[59]             : C10       : output : 3.3-V LVTTL       :         : 2         : N              
+Control_Word[6]              : C11       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[29]             : C12       : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[51]              : C13       : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[46]                    : C14       : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[63]                    : C15       : input  : 3.3-V LVTTL       :         : 2         : N              
+Cout                         : C16       : output : 3.3-V LVTTL       :         : 2         : N              
+Const[56]                    : C17       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : C18       : gnd    :                   :         :           :                
+Const[38]                    : D1        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[47]              : D2        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[45]              : D3        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : D4        :        :                   :         : 1         :                
+RAM_Data_in[13]              : D5        : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[24]                    : D6        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[22]             : D7        : output : 3.3-V LVTTL       :         : 2         : N              
+Control_Word[3]              : D8        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[34]             : D9        : output : 3.3-V LVTTL       :         : 2         : N              
+Const[15]                    : D10       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[56]             : D11       : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[12]             : D12       : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[23]             : D13       : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[14]              : D14       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[46]              : D15       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[50]             : D16       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : D17       :        :                   :         : 3         :                
+RAM_Data_in[37]              : D18       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO1                       : E1        : power  :                   : 3.3V    : 1         :                
+RAM_Data_out[20]             : E2        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[18]              : E3        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[23]                    : E4        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[52]                    : E5        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[29]              : E6        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[33]             : E7        : output : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[47]             : E8        : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : E9        : power  :                   : 3.3V    : 2         :                
+RAM_Data_out[10]             : E10       : output : 3.3-V LVTTL       :         : 2         : N              
+Const[60]                    : E11       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : E12       : power  :                   : 3.3V    : 2         :                
+Const[58]                    : E13       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E14       :        :                   :         : 3         :                
+Const[40]                    : E15       : input  : 3.3-V LVTTL       :         : 3         : N              
+Control_Word[14]             : E16       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[50]              : E17       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : E18       : power  :                   : 3.3V    : 3         :                
+Const[26]                    : F1        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[51]                    : F2        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[6]               : F3        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[41]              : F4        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[7]                     : F5        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[8]              : F6        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[43]             : F7        : output : 3.3-V LVTTL       :         : 1         : N              
+Const[36]                    : F8        : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[9]                     : F9        : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[49]              : F10       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[59]              : F11       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_out[31]             : F12       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[34]              : F13       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[42]             : F14       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[35]              : F15       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[42]                    : F16       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[17]                    : F17       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[57]              : F18       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[36]              : G1        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[26]             : G2        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[36]             : G3        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[38]             : G4        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[44]             : G5        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[20]              : G6        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : G7        : power  :                   : 3.3V    : 1         :                
+Const[34]                    : G8        : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[11]                    : G9        : input  : 3.3-V LVTTL       :         : 2         : N              
+Control_Word[0]              : G10       : input  : 3.3-V LVTTL       :         : 2         : N              
+Const[31]                    : G11       : input  : 3.3-V LVTTL       :         : 2         : N              
+RAM_Data_in[56]              : G12       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[20]                    : G13       : input  : 3.3-V LVTTL       :         : 3         : N              
+Control_Word[11]             : G14       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[24]              : G15       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[47]                    : G16       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[35]             : G17       : output : 3.3-V LVTTL       :         : 3         : N              
+Control_Word[4]              : G18       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[48]              : H1        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[13]             : H2        : output : 3.3-V LVTTL       :         : 1         : N              
+Const[19]                    : H3        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[15]             : H4        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[39]             : H5        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[9]              : H6        : output : 3.3-V LVTTL       :         : 1         : N              
+DATA0                        : H7        : input  :                   :         : 1         :                
+GND                          : H8        : gnd    :                   :         :           :                
+GND                          : H9        : gnd    :                   :         :           :                
+VCCINT                       : H10       : power  :                   : 1.5V    :           :                
+GND                          : H11       : gnd    :                   :         :           :                
+VCCIO3                       : H12       : power  :                   : 3.3V    : 3         :                
+RAM_Data_out[49]             : H13       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[32]             : H14       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[46]             : H15       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[48]             : H16       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[57]             : H17       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[45]             : H18       : output : 3.3-V LVTTL       :         : 3         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : J1        : input  : 3.3-V LVTTL       :         : 1         : N              
+nCONFIG                      : J2        :        :                   :         : 1         :                
+Reset                        : J3        : input  : 3.3-V LVTTL       :         : 1         : N              
+Clock                        : J4        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCA_PLL1                    : J5        : power  :                   : 1.5V    :           :                
+GNDG_PLL1                    : J6        : gnd    :                   :         :           :                
+nCE                          : J7        :        :                   :         : 1         :                
+GND                          : J8        : gnd    :                   :         :           :                
+VCCINT                       : J9        : power  :                   : 1.5V    :           :                
+GND                          : J10       : gnd    :                   :         :           :                
+GND                          : J11       : gnd    :                   :         :           :                
+VCCA_PLL2                    : J12       : power  :                   : 1.5V    :           :                
+RAM_Data_in[58]              : J13       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[23]              : J14       : input  : 3.3-V LVTTL       :         : 3         : N              
+Control_Word[13]             : J15       : input  : 3.3-V LVTTL       :         : 3         : N              
+Control_Word[15]             : J16       : input  : 3.3-V LVTTL       :         : 3         : N              
+TDI                          : J17       : input  :                   :         : 3         :                
+GNDG_PLL2                    : J18       : gnd    :                   :         :           :                
+GNDA_PLL1                    : K1        : gnd    :                   :         :           :                
+nCEO                         : K2        :        :                   :         : 1         :                
+MSEL0                        : K3        :        :                   :         : 1         :                
+RAM_Data_out[52]             : K4        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[6]              : K5        : output : 3.3-V LVTTL       :         : 1         : N              
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : K6        : input  : 3.3-V LVTTL       :         : 1         : N              
+MSEL1                        : K7        :        :                   :         : 1         :                
+GND                          : K8        : gnd    :                   :         :           :                
+GND                          : K9        : gnd    :                   :         :           :                
+VCCINT                       : K10       : power  :                   : 1.5V    :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+GNDA_PLL2                    : K12       : gnd    :                   :         :           :                
+TDO                          : K13       : output :                   :         : 3         :                
+TMS                          : K14       : input  :                   :         : 3         :                
+RAM_Data_out[63]             : K15       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[62]             : K16       : output : 3.3-V LVTTL       :         : 3         : N              
+CONF_DONE                    : K17       :        :                   :         : 3         :                
+TCK                          : K18       : input  :                   :         : 3         :                
+DCLK                         : L1        : bidir  :                   :         : 1         :                
+Control_Word[1]              : L2        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[5]              : L3        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[27]             : L4        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[28]             : L5        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[62]              : L6        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[1]              : L7        : output : 3.3-V LVTTL       :         : 1         : N              
+GND                          : L8        : gnd    :                   :         :           :                
+VCCINT                       : L9        : power  :                   : 1.5V    :           :                
+GND                          : L10       : gnd    :                   :         :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+nSTATUS                      : L12       :        :                   :         : 3         :                
+RAM_Data_in[3]               : L13       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[18]             : L14       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[42]              : L15       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Addr_out[1]              : L16       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[3]              : L17       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[41]             : L18       : output : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_out[53]             : M1        : output : 3.3-V LVTTL       :         : 1         : N              
+Const[27]                    : M2        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[19]             : M3        : output : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_out[25]             : M4        : output : 3.3-V LVTTL       :         : 1         : N              
+Const[21]                    : M5        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[55]                    : M6        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : M7        : power  :                   : 3.3V    : 1         :                
+RAM_Data_in[28]              : M8        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[54]              : M9        : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[57]                    : M10       : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[44]              : M11       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO3                       : M12       : power  :                   : 3.3V    : 3         :                
+Control_Word[9]              : M13       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[30]              : M14       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[53]                    : M15       : input  : 3.3-V LVTTL       :         : 3         : N              
+Control_Word[10]             : M16       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[5]               : M17       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[4]                     : M18       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[40]              : N1        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[54]                    : N2        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[16]              : N3        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[37]                    : N4        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[13]                    : N5        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[16]                    : N6        : input  : 3.3-V LVTTL       :         : 1         : N              
+Const[25]                    : N7        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[10]              : N8        : input  : 3.3-V LVTTL       :         : 4         : N              
+Control_Word[12]             : N9        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[60]              : N10       : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[2]                     : N11       : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[61]                    : N12       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[17]              : N13       : input  : 3.3-V LVTTL       :         : 3         : N              
+Control_Word[2]              : N14       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[5]                     : N15       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[14]                    : N16       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Addr_out[5]              : N17       : output : 3.3-V LVTTL       :         : 3         : N              
+Const[41]                    : N18       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO1                       : P1        : power  :                   : 3.3V    : 1         :                
+GND*                         : P2        :        :                   :         : 1         :                
+RAM_Data_in[12]              : P3        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : P4        :        :                   :         : 1         :                
+Const[6]                     : P5        : input  : 3.3-V LVTTL       :         : 1         : N              
+RAM_Data_in[27]              : P6        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[2]               : P7        : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : P8        : power  :                   : 3.3V    : 4         :                
+Const[1]                     : P9        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[16]             : P10       : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : P11       : power  :                   : 3.3V    : 4         :                
+GND*                         : P12       :        :                   :         : 4         :                
+RAM_Data_in[19]              : P13       : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[0]                     : P14       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[22]              : P15       : input  : 3.3-V LVTTL       :         : 3         : N              
+Const[12]                    : P16       : input  : 3.3-V LVTTL       :         : 3         : N              
+RAM_Data_in[1]               : P17       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : P18       : power  :                   : 3.3V    : 3         :                
+RAM_Data_in[39]              : R1        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : R2        :        :                   :         : 1         :                
+GND*                         : R3        :        :                   :         : 1         :                
+RAM_Data_in[52]              : R4        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[33]              : R5        : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[39]                    : R6        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[61]              : R7        : input  : 3.3-V LVTTL       :         : 4         : N              
+Control_Word[5]              : R8        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[55]             : R9        : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Addr_out[4]              : R10       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[60]             : R11       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Addr_out[0]              : R12       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[63]              : R13       : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[15]              : R14       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : R15       :        :                   :         : 3         :                
+GND*                         : R16       :        :                   :         : 3         :                
+GND*                         : R17       :        :                   :         : 3         :                
+GND*                         : R18       :        :                   :         : 3         :                
+GND                          : T1        : gnd    :                   :         :           :                
+GND*                         : T2        :        :                   :         : 1         :                
+GND*                         : T3        :        :                   :         : 1         :                
+GND*                         : T4        :        :                   :         : 4         :                
+GND*                         : T5        :        :                   :         : 4         :                
+RAM_Data_in[7]               : T6        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[24]             : T7        : output : 3.3-V LVTTL       :         : 4         : N              
+Z                            : T8        : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[26]              : T9        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[25]              : T10       : input  : 3.3-V LVTTL       :         : 4         : N              
+Control_Word[8]              : T11       : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[59]                    : T12       : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[32]                    : T13       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : T14       :        :                   :         : 4         :                
+GND*                         : T15       :        :                   :         : 4         :                
+RAM_Data_out[4]              : T16       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : T17       :        :                   :         : 3         :                
+GND                          : T18       : gnd    :                   :         :           :                
+VCCINT                       : U1        : power  :                   : 1.5V    :           :                
+GND                          : U2        : gnd    :                   :         :           :                
+GND*                         : U3        :        :                   :         : 4         :                
+GND*                         : U4        :        :                   :         : 4         :                
+GND*                         : U5        :        :                   :         : 4         :                
+Const[18]                    : U6        : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[10]                    : U7        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[17]             : U8        : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[55]              : U9        : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[29]                    : U10       : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Addr_out[2]              : U11       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[58]             : U12       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[4]               : U13       : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[14]             : U14       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : U15       :        :                   :         : 4         :                
+Const[49]                    : U16       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : U17       : gnd    :                   :         :           :                
+VCCINT                       : U18       : power  :                   : 1.5V    :           :                
+GND                          : V1        : gnd    :                   :         :           :                
+VCCINT                       : V2        : power  :                   : 1.5V    :           :                
+GND                          : V3        : gnd    :                   :         :           :                
+GND*                         : V4        :        :                   :         : 4         :                
+VCCIO4                       : V5        : power  :                   : 3.3V    : 4         :                
+Const[33]                    : V6        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[21]              : V7        : input  : 3.3-V LVTTL       :         : 4         : N              
+Const[8]                     : V8        : input  : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[7]              : V9        : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Addr_out[3]              : V10       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[2]              : V11       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_out[30]             : V12       : output : 3.3-V LVTTL       :         : 4         : N              
+RAM_Data_in[0]               : V13       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : V14       : power  :                   : 3.3V    : 4         :                
+GND*                         : V15       :        :                   :         : 4         :                
+GND                          : V16       : gnd    :                   :         :           :                
+VCCINT                       : V17       : power  :                   : 1.5V    :           :                
+GND                          : V18       : gnd    :                   :         :           :                
