@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DataPath
-Fri Feb 14 13:55:30 2014
+Sat Feb 15 18:48:18 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -13,15 +13,21 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |DataPath
- 11. Parameter Settings for User Entity Instance: RegisterFile:Registers
- 12. Parameter Settings for User Entity Instance: Function_Unit:Functions
- 13. Parameter Settings for User Entity Instance: Function_Unit:Functions|ALU:ALU_Inst
- 14. Parameter Settings for User Entity Instance: Function_Unit:Functions|Shifter:Shift_Inst
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. General Register Statistics
+ 10. Registers Packed Into Inferred Megafunctions
+ 11. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 12. Source assignments for RAM:RAM|altsyncram:RAM_rtl_0|altsyncram_5641:auto_generated
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |DataPath
+ 14. Parameter Settings for User Entity Instance: RegisterFile:Registers
+ 15. Parameter Settings for User Entity Instance: Function_Unit:Functions
+ 16. Parameter Settings for User Entity Instance: Function_Unit:Functions|ALU:ALU_Inst
+ 17. Parameter Settings for User Entity Instance: Function_Unit:Functions|Shifter:Shift_Inst
+ 18. Parameter Settings for User Entity Instance: RAM:RAM
+ 19. Parameter Settings for Inferred Entity Instance: RAM:RAM|altsyncram:RAM_rtl_0
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -47,15 +53,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-----------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Feb 14 13:55:30 2014         ;
+; Analysis & Synthesis Status ; Successful - Sat Feb 15 18:48:18 2014         ;
 ; Quartus II Version          ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name               ; DataPath                                      ;
 ; Top-level Entity Name       ; DataPath                                      ;
 ; Family                      ; Cyclone                                       ;
-; Total logic elements        ; 1,199                                         ;
-; Total pins                  ; 218                                           ;
+; Total logic elements        ; 449                                           ;
+; Total pins                  ; 36                                            ;
 ; Total virtual pins          ; 0                                             ;
-; Total memory bits           ; 0                                             ;
+; Total memory bits           ; 32,768                                        ;
 ; Total PLLs                  ; 0                                             ;
 +-----------------------------+-----------------------------------------------+
 
@@ -65,8 +71,10 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP1C3T100C8        ;                    ;
 ; Top-level entity name                                                      ; DataPath           ; DataPath           ;
 ; Family name                                                                ; Cyclone            ; Cyclone IV GX      ;
+; Optimization Technique                                                     ; Speed              ; Balanced           ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -96,7 +104,6 @@ applicable agreement for further details.
 ; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
 ; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
 ; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
 ; Carry Chain Length                                                         ; 70                 ; 70                 ;
 ; Auto Carry Chains                                                          ; On                 ; On                 ;
 ; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
@@ -149,20 +156,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+
-; DataPath.vhd                     ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/DataPath.vhd       ;
-; Logic_Slice.vhd                  ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Logic_Slice.vhd    ;
-; ALU_Slice.vhd                    ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/ALU_Slice.vhd      ;
-; Function_Unit.vhd                ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Function_Unit.vhd  ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/ALU.vhd            ;
-; Shifter.vhd                      ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Shifter.vhd        ;
-; RegisterFile.vhd                 ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/RegisterFile.vhd   ;
-; Misc_functions.vhd               ; yes             ; User VHDL File  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Misc_functions.vhd ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+
+; DataPath.vhd                     ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/DataPath.vhd           ;
+; Logic_Slice.vhd                  ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Logic_Slice.vhd        ;
+; ALU_Slice.vhd                    ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/ALU_Slice.vhd          ;
+; Function_Unit.vhd                ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Function_Unit.vhd      ;
+; ALU.vhd                          ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/ALU.vhd                ;
+; Shifter.vhd                      ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Shifter.vhd            ;
+; RegisterFile.vhd                 ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/RegisterFile.vhd       ;
+; Misc_functions.vhd               ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/Misc_functions.vhd     ;
+; RAM.vhd                          ; yes             ; User VHDL File               ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/RAM.vhd                ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;
+; aglobal110.inc                   ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/aglobal110.inc          ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc           ;
+; altrom.inc                       ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/altrom.inc              ;
+; altram.inc                       ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/altram.inc              ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /home/joseph/altera/11.0sp1/quartus/libraries/megafunctions/altdpram.inc            ;
+; db/altsyncram_5641.tdf           ; yes             ; Auto-Generated Megafunction  ; /media/Data/Joseph/Electronics/VHDL Projects/Altera/Datapath/db/altsyncram_5641.tdf ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -170,110 +188,91 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 1199  ;
-;     -- Combinational with no register       ; 879   ;
-;     -- Register only                        ; 320   ;
+; Total logic elements                        ; 449   ;
+;     -- Combinational with no register       ; 321   ;
+;     -- Register only                        ; 128   ;
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 467   ;
-;     -- 3 input functions                    ; 410   ;
-;     -- 2 input functions                    ; 2     ;
+;     -- 4 input functions                    ; 246   ;
+;     -- 3 input functions                    ; 64    ;
+;     -- 2 input functions                    ; 11    ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1199  ;
+;     -- normal mode                          ; 449   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 320   ;
+;     -- asynchronous clear/load mode         ; 128   ;
 ;                                             ;       ;
-; Total registers                             ; 320   ;
-; I/O pins                                    ; 218   ;
+; Total registers                             ; 128   ;
+; I/O pins                                    ; 36    ;
+; Total memory bits                           ; 32768 ;
 ; Maximum fan-out node                        ; Clock ;
-; Maximum fan-out                             ; 320   ;
-; Total fan-out                               ; 4454  ;
-; Average fan-out                             ; 3.14  ;
+; Maximum fan-out                             ; 144   ;
+; Total fan-out                               ; 1936  ;
+; Average fan-out                             ; 3.86  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
-+--------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                 ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                            ; Library Name ;
-+--------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
-; |DataPath                                  ; 1199 (451)  ; 320          ; 0           ; 218  ; 0            ; 879 (451)    ; 320 (0)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath                                                                      ;              ;
-;    |Function_Unit:Functions|               ; 231 (10)    ; 0            ; 0           ; 0    ; 0            ; 231 (10)     ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions                                              ;              ;
-;       |ALU:ALU_Inst|                       ; 221 (62)    ; 0            ; 0           ; 0    ; 0            ; 221 (62)     ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst                                 ;              ;
-;          |ALU_Slice:\ALU_Generate:0:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:0:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:10:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:10:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:11:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:11:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:12:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:12:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:13:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:13:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:14:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:14:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:15:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:15:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:16:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:16:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:17:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:17:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:18:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:18:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:19:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:19:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:1:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:1:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:20:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:20:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:21:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:21:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:22:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:22:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:23:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:23:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:24:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:24:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:25:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:25:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:26:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:26:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:27:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:27:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:28:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:28:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:29:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:29:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:2:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:2:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:30:ALUS| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:30:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:31:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:31:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:32:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:32:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:33:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:33:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:34:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:34:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:35:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:35:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:36:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:36:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:37:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:37:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:38:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:38:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:39:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:39:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:3:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:3:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:40:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:40:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:41:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:41:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:42:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:42:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:43:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:43:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:44:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:44:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:45:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:45:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:46:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:46:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:47:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:47:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:48:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:48:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:49:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:49:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:4:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:4:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:50:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:50:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:51:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:51:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:52:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:52:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:53:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:53:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:54:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:54:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:55:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:55:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:56:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:56:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:57:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:57:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:58:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:58:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:59:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:59:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:5:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:5:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:60:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:60:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:61:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:61:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:62:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:62:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:63:ALUS| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:63:ALUS ;              ;
-;          |ALU_Slice:\ALU_Generate:6:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:6:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:7:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:7:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:8:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:8:ALUS  ;              ;
-;          |ALU_Slice:\ALU_Generate:9:ALUS|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:9:ALUS  ;              ;
-;    |RegisterFile:Registers|                ; 517 (517)   ; 320          ; 0           ; 0    ; 0            ; 197 (197)    ; 320 (320)         ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|RegisterFile:Registers                                               ;              ;
-+--------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                              ; Library Name ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------+--------------+
+; |DataPath                                    ; 449 (74)    ; 128          ; 32768       ; 36   ; 0            ; 321 (74)     ; 128 (0)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath                                                                        ;              ;
+;    |Function_Unit:Functions|                 ; 95 (10)     ; 0            ; 0           ; 0    ; 0            ; 95 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions                                                ;              ;
+;       |ALU:ALU_Inst|                         ; 85 (16)     ; 0            ; 0           ; 0    ; 0            ; 85 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst                                   ;              ;
+;          |ALU_Slice:\ALU_Generate:0:ALUS|    ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:0:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:10:ALUS|   ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:10:ALUS   ;              ;
+;          |ALU_Slice:\ALU_Generate:11:ALUS|   ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:11:ALUS   ;              ;
+;          |ALU_Slice:\ALU_Generate:12:ALUS|   ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:12:ALUS   ;              ;
+;          |ALU_Slice:\ALU_Generate:13:ALUS|   ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:13:ALUS   ;              ;
+;          |ALU_Slice:\ALU_Generate:14:ALUS|   ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:14:ALUS   ;              ;
+;          |ALU_Slice:\ALU_Generate:15:ALUS|   ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:15:ALUS   ;              ;
+;          |ALU_Slice:\ALU_Generate:1:ALUS|    ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:1:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:2:ALUS|    ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:2:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:3:ALUS|    ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:3:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:4:ALUS|    ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:4:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:5:ALUS|    ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:5:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:6:ALUS|    ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:6:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:7:ALUS|    ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:7:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:8:ALUS|    ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:8:ALUS    ;              ;
+;          |ALU_Slice:\ALU_Generate:9:ALUS|    ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:9:ALUS    ;              ;
+;          |Logic_Slice:\Logic_Generate:0:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:0:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:10:LS| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:10:LS ;              ;
+;          |Logic_Slice:\Logic_Generate:11:LS| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:11:LS ;              ;
+;          |Logic_Slice:\Logic_Generate:12:LS| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:12:LS ;              ;
+;          |Logic_Slice:\Logic_Generate:13:LS| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:13:LS ;              ;
+;          |Logic_Slice:\Logic_Generate:14:LS| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:14:LS ;              ;
+;          |Logic_Slice:\Logic_Generate:15:LS| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:15:LS ;              ;
+;          |Logic_Slice:\Logic_Generate:1:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:1:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:2:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:2:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:3:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:3:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:4:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:4:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:5:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:5:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:6:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:6:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:7:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:7:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:8:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:8:LS  ;              ;
+;          |Logic_Slice:\Logic_Generate:9:LS|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:9:LS  ;              ;
+;    |RAM:RAM|                                 ; 0 (0)       ; 0            ; 32768       ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|RAM:RAM                                                                ;              ;
+;       |altsyncram:RAM_rtl_0|                 ; 0 (0)       ; 0            ; 32768       ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|RAM:RAM|altsyncram:RAM_rtl_0                                           ;              ;
+;          |altsyncram_5641:auto_generated|    ; 0 (0)       ; 0            ; 32768       ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|RAM:RAM|altsyncram:RAM_rtl_0|altsyncram_5641:auto_generated            ;              ;
+;    |RegisterFile:Registers|                  ; 280 (280)   ; 128          ; 0           ; 0    ; 0            ; 152 (152)    ; 128 (128)         ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DataPath|RegisterFile:Registers                                                 ;              ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                       ;
++------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                   ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+------+
+; RAM:RAM|altsyncram:RAM_rtl_0|altsyncram_5641:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; None ;
++------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+------+
 
 
 +------------------------------------------------------+
@@ -281,28 +280,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 320   ;
+; Total registers                              ; 128   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 320   ;
+; Number of registers using Asynchronous Clear ; 128   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 320   ;
+; Number of registers using Clock Enable       ; 128   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions       ;
++-------------------------+-------------------+------+
+; Register Name           ; Megafunction      ; Type ;
++-------------------------+-------------------+------+
+; RAM:RAM|addr_reg[0..10] ; RAM:RAM|RAM_rtl_0 ; RAM  ;
++-------------------------+-------------------+------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                    ;
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                          ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
-; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:63:ALUS|Mux0 ;                            ;
-; 5:1                ; 64 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; |DataPath|RegisterFile:Registers|Mux42                                              ;                            ;
-; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|G[27]                                ;                            ;
-; 6:1                ; 64 bits   ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; |DataPath|B_Bus[47]                                                                 ;                            ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; |DataPath|D_Bus[1]                                                                  ;                            ;
-; 9:1                ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; |DataPath|D_Bus[33]                                                                 ;                            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:15:ALUS|Mux0 ;                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; |DataPath|RegisterFile:Registers|Mux7                                               ;                            ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; |DataPath|Function_Unit:Functions|ALU:ALU_Inst|G[7]                                 ;                            ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; |DataPath|B_Bus[0]                                                                  ;                            ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; |DataPath|D_Bus[3]                                                                  ;                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Source assignments for RAM:RAM|altsyncram:RAM_rtl_0|altsyncram_5641:auto_generated ;
++---------------------------------+--------------------+------+----------------------+
+; Assignment                      ; Value              ; From ; To                   ;
++---------------------------------+--------------------+------+----------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                    ;
++---------------------------------+--------------------+------+----------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -310,7 +326,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
-; Width          ; 64    ; Signed Integer                                  ;
+; Width          ; 16    ; Signed Integer                                  ;
+; Regs           ; 8     ; Signed Integer                                  ;
+; RAM_Size       ; 2048  ; Signed Integer                                  ;
 +----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -320,8 +338,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------+
 ; Parameter Name ; Value ; Type                                       ;
 +----------------+-------+--------------------------------------------+
-; width          ; 64    ; Signed Integer                             ;
-; regs           ; 5     ; Signed Integer                             ;
+; width          ; 16    ; Signed Integer                             ;
+; regs           ; 8     ; Signed Integer                             ;
 +----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -331,7 +349,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------+
 ; Parameter Name ; Value ; Type                                        ;
 +----------------+-------+---------------------------------------------+
-; width          ; 64    ; Signed Integer                              ;
+; width          ; 16    ; Signed Integer                              ;
 +----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -341,7 +359,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                     ;
 +----------------+-------+----------------------------------------------------------+
-; width          ; 64    ; Signed Integer                                           ;
+; width          ; 16    ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -351,9 +369,100 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                           ;
 +----------------+-------+----------------------------------------------------------------+
-; width          ; 64    ; Signed Integer                                                 ;
+; width          ; 16    ; Signed Integer                                                 ;
 +----------------+-------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM:RAM ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; size           ; 2048  ; Signed Integer              ;
+; width          ; 16    ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RAM:RAM|altsyncram:RAM_rtl_0 ;
++------------------------------------+----------------------+-------------------+
+; Parameter Name                     ; Value                ; Type              ;
++------------------------------------+----------------------+-------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped           ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped           ;
+; WIDTH_A                            ; 16                   ; Untyped           ;
+; WIDTHAD_A                          ; 11                   ; Untyped           ;
+; NUMWORDS_A                         ; 2048                 ; Untyped           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped           ;
+; WIDTH_B                            ; 1                    ; Untyped           ;
+; WIDTHAD_B                          ; 1                    ; Untyped           ;
+; NUMWORDS_B                         ; 1                    ; Untyped           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped           ;
+; BYTE_SIZE                          ; 8                    ; Untyped           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped           ;
+; INIT_FILE                          ; UNUSED               ; Untyped           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped           ;
+; DEVICE_FAMILY                      ; Cyclone              ; Untyped           ;
+; CBXI_PARAMETER                     ; altsyncram_5641      ; Untyped           ;
++------------------------------------+----------------------+-------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                         ;
++-------------------------------------------+------------------------------+
+; Name                                      ; Value                        ;
++-------------------------------------------+------------------------------+
+; Number of entity instances                ; 1                            ;
+; Entity Instance                           ; RAM:RAM|altsyncram:RAM_rtl_0 ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                  ;
+;     -- WIDTH_A                            ; 16                           ;
+;     -- NUMWORDS_A                         ; 2048                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                 ;
+;     -- WIDTH_B                            ; 1                            ;
+;     -- NUMWORDS_B                         ; 1                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                    ;
++-------------------------------------------+------------------------------+
 
 
 +-------------------------------+
@@ -361,7 +470,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -371,7 +480,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Feb 14 13:55:25 2014
+    Info: Processing started: Sat Feb 15 18:48:16 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DataPath -c DataPath
 Warning: Parallel compilation is not licensed and has been disabled
 Info: Found 2 design units, including 1 entities, in source file DataPath.vhd
@@ -398,6 +507,9 @@ Info: Found 2 design units, including 1 entities, in source file RegisterFile.vh
 Info: Found 2 design units, including 0 entities, in source file Misc_functions.vhd
     Info: Found design unit 1: Misc_functions
     Info: Found design unit 2: Misc_functions-body
+Info: Found 2 design units, including 1 entities, in source file RAM.vhd
+    Info: Found design unit 1: RAM-RTL
+    Info: Found entity 1: RAM
 Info: Elaborating entity "DataPath" for the top level hierarchy
 Info: Elaborating entity "RegisterFile" for hierarchy "RegisterFile:Registers"
 Info: Elaborating entity "Function_Unit" for hierarchy "Function_Unit:Functions"
@@ -405,15 +517,41 @@ Info: Elaborating entity "ALU" for hierarchy "Function_Unit:Functions|ALU:ALU_In
 Info: Elaborating entity "Logic_Slice" for hierarchy "Function_Unit:Functions|ALU:ALU_Inst|Logic_Slice:\Logic_Generate:0:LS"
 Info: Elaborating entity "ALU_Slice" for hierarchy "Function_Unit:Functions|ALU:ALU_Inst|ALU_Slice:\ALU_Generate:0:ALUS"
 Info: Elaborating entity "Shifter" for hierarchy "Function_Unit:Functions|Shifter:Shift_Inst"
+Info: Elaborating entity "RAM" for hierarchy "RAM:RAM"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred altsyncram megafunction from the following design logic: "RAM:RAM|RAM_rtl_0" 
+        Info: Parameter OPERATION_MODE set to SINGLE_PORT
+        Info: Parameter WIDTH_A set to 16
+        Info: Parameter WIDTHAD_A set to 11
+        Info: Parameter NUMWORDS_A set to 2048
+        Info: Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info: Parameter ADDRESS_ACLR_A set to NONE
+        Info: Parameter OUTDATA_ACLR_A set to NONE
+        Info: Parameter INDATA_ACLR_A set to NONE
+        Info: Parameter WRCONTROL_ACLR_A set to NONE
+Info: Elaborated megafunction instantiation "RAM:RAM|altsyncram:RAM_rtl_0"
+Info: Instantiated megafunction "RAM:RAM|altsyncram:RAM_rtl_0" with the following parameter:
+    Info: Parameter "OPERATION_MODE" = "SINGLE_PORT"
+    Info: Parameter "WIDTH_A" = "16"
+    Info: Parameter "WIDTHAD_A" = "11"
+    Info: Parameter "NUMWORDS_A" = "2048"
+    Info: Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info: Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info: Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info: Parameter "INDATA_ACLR_A" = "NONE"
+    Info: Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_5641.tdf
+    Info: Found entity 1: altsyncram_5641
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 1417 device resources after synthesis - the final resource count might be different
-    Info: Implemented 146 input pins
-    Info: Implemented 72 output pins
-    Info: Implemented 1199 logic cells
+Info: Implemented 501 device resources after synthesis - the final resource count might be different
+    Info: Implemented 34 input pins
+    Info: Implemented 2 output pins
+    Info: Implemented 449 logic cells
+    Info: Implemented 16 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 289 megabytes
-    Info: Processing ended: Fri Feb 14 13:55:30 2014
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 290 megabytes
+    Info: Processing ended: Sat Feb 15 18:48:18 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

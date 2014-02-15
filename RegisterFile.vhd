@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.Misc_functions.all;
 
 Entity RegisterFile is
 	Generic ( Width : integer := 8; --Width of Register
@@ -8,9 +9,9 @@ Entity RegisterFile is
 	Port (
 				Reset : in std_logic;
 				Clock : in std_logic;
-				A_addr : in std_logic_vector(2 downto 0);
-				B_addr : in std_logic_vector(2 downto 0);
-				Dest : in std_logic_vector(2 downto 0);
+				A_addr : in std_logic_vector(log2Val(Regs) - 1 downto 0);
+				B_addr : in std_logic_vector(log2Val(Regs) - 1 downto 0);
+				Dest : in std_logic_vector(log2Val(Regs) - 1 downto 0);
 				LE : in std_logic;
 				D_data : in std_logic_vector(Width - 1 downto 0);
 				A_data : out std_logic_vector(Width - 1 downto 0);
@@ -25,7 +26,7 @@ Architecture RTL of RegisterFile is
 	
 begin
 	
-	--Creaet RAM Registers
+	--Create RAM Registers
 	Process(Reset,Clock,LE)
 	Begin
 		if (Reset = '1') then

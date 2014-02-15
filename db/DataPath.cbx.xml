@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="DataPath">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DataPath|RAM:RAM|altsyncram:RAM_rtl_0" CBX_FILE_NAME="altsyncram_5641.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

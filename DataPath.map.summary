@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Feb 14 13:55:30 2014
+Analysis & Synthesis Status : Successful - Sat Feb 15 18:48:18 2014
 Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition
 Revision Name : DataPath
 Top-level Entity Name : DataPath
 Family : Cyclone
-Total logic elements : 1,199
-Total pins : 218
+Total logic elements : 449
+Total pins : 36
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 32,768
 Total PLLs : 0
